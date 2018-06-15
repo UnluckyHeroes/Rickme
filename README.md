@@ -1,37 +1,51 @@
-## Welcome to GitHub Pages
+# UNLUCKY HEROES
 
-You can use the [editor on GitHub](https://github.com/UnluckyHeroes/Rickme/edit/gh-pages/README.md) to maintain and preview the content for your website in Markdown files.
+Welcome to the Unlucky Heroes page! We are a team formed by six students of the Degree in [VideoGames Design and Development](https://www.citm.upc.edu/cat/estudis/graus-videojocs/) from [CITM](https://www.citm.upc.edu/), at [Polithecnic University of Catalonia](http://www.upc.edu/ca).
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+      //Foto de grupo
+      
+You can see our github [here](https://github.com/UnluckyHeroes). 
 
-### Markdown
+## Rickme Project
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+Our latest project (in progress) is Rickme, a PC beat 'em up videogame in which you are a developer that must arrive on time to the E3 presentation with a stable build of a game.
 
-```markdown
-Syntax highlighted code block
+However, the night before he discovers that the build crashes, so in his way to the E3 he will have to clean the build and providing stability to it by killing bugs, crashes, avoiding bad internet connections... He may also update the readme version by picking readme updates and all that in a limited time!
 
-# Header 1
-## Header 2
-### Header 3
+## The Team
 
-- Bulleted
-- List
+Lucho Suaya - Management & Design (@lucho1)
 
-1. Numbered
-2. List
+<img src="Web Photos/Lucho.png" alt="hi" class="inline"/>
 
-**Bold** and _Italic_ and `Code` text
 
-[Link](url) and ![Image](src)
-```
+Roger Leon - Art Director (@rleonborras)
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+<img src="Web Photos/Ruier.png" alt="hi" class="inline"/>
 
-### Jekyll Themes
+	
+Carles Homs - Programming Director (@ch0m5)
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/UnluckyHeroes/Rickme/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+<img src="Web Photos/KRLS.png" alt="hi" class="inline"/>
 
-### Support or Contact
 
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+Jaume Avinyo - Programming (@Jaumeavinyo)
+
+<img src="Web Photos/James.png" alt="hi" class="inline"/>
+
+
+Andrés Saladrigas - Art (@TheArzhel)
+
+<img src="Web Photos/Andres.png" alt="hi" class="inline"/>
+
+
+Dídac Romero - Programming & Audio (@DidacRomero)
+
+<img src="Web Photos/Didac.png" alt="hi" class="inline"/>
+
+
+## Contact
+
+You can contact us by sending an e-mail to luchosuaya99@gmail.com
+
+
