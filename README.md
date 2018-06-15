@@ -46,6 +46,6 @@ Dídac Romero - Programming & Audio (@DidacRomero)
 
 ## Contact
 
-You can contact us by sending an e-mail to luchosuaya99@gmail.com
+You can contact us by sending an e-mail to [luchosuaya99@gmail.com](mailto:luchosuaya99@gmail.com)
 
 
