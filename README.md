@@ -3,7 +3,7 @@ This is a personal project made by CITM (Centre de la Imatge i la Tecnologia Mul
 
 RICKME is a [INSERT SHORT GAME DESCRIPTION].
 
-You can see the full video gameplay (NOT YET) on our [webpage](https://goo.gl/iCsdAr) or clicking this [link]().
+You can see the full video gameplay (NOT YET) on our [website](https://goo.gl/iCsdAr) or clicking this [link]().
 
 ## Installation
 No previous installation is required to play the game, just download and execute the .exe file *Rickme* from the latest release.
@@ -18,14 +18,6 @@ No previous installation is required to play the game, just download and execute
 ## Updates
 ### Current Version: v0.0
 ### Updates From Last Version
-
-## Contributing
-1. Fork it!
-2. Create your feature branch: `git checkout -b my-newfeature`
-3. Commit your changes: `git commit -am 'Add some
-feature'`
-4. Push to the branch: `git push origin my-new-feature`
-5. Submit a pull request and we might look into it. :D
 
 ## The Unlucky Heroes Team
 ![Luciano Suaya](https://raw.githubusercontent.com/UnluckyHeroes/Rickme/gh-pages/Web%20Photos/Lucho.png)
@@ -68,14 +60,23 @@ feature'`
   * Role: QA
   * Github: [@Jaumeavinyo](https://github.com/Jaumeavinyo)
 
- ## Contact
-
-Web Page: https://goo.gl/iCsdAr
+## Contact
+Website: https://goo.gl/iCsdAr
 
 luchosuaya99@gmail.com
 
 GitHub Account: Unlucky Heroes
 
+## Contributing
+1. Fork it!
+2. Create your feature branch: `git checkout -b my-newfeature`
+3. Commit your changes: `git commit -am 'Add some
+feature'`
+4. Push to the branch: `git push origin my-new-feature`
+5. Submit a pull request and we might look into it. :D
+
 ## License & Copyright 
 
-© Unlucky Heores
+© Unlucky Heroes
+
+Licensed under the [MIT License](https://github.com/UnluckyHeroes/Rickme/blob/master/LICENSE)
