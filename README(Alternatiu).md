@@ -6,7 +6,7 @@ RICKME is a [INSERT SHORT GAME DESCRIPTION].
 You can see the full video gameplay (NOT YET) on our [webpage](https://goo.gl/iCsdAr) or clicking this [INSERT_YOUTUBE_LINK].
 
 ## Installation
-No previous installations is required to play the game, just download and execute the .exe file *Rickme* from the latest release.
+No previous installation is required to play the game, just download and execute the .exe file *Rickme* from the latest release.
 
 ## Usage
 ### General Controls
