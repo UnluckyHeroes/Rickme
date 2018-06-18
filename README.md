@@ -20,52 +20,60 @@ No previous installation is required to play the game, just download and execute
 ### Updates From Last Version
 
 ## The Unlucky Heroes Team
-![Luciano Suaya](https://raw.githubusercontent.com/UnluckyHeroes/Rickme/gh-pages/Web%20Photos/Lucho.png)
 * Luciano Suaya
   * Role: Managment & Design Lead
   * Github: [@lucho1](https://github.com/lucho1)
 
-![Roger León](https://raw.githubusercontent.com/UnluckyHeroes/Rickme/gh-pages/Web%20Photos/Ruier.png)
+![Luciano Suaya](https://raw.githubusercontent.com/UnluckyHeroes/Rickme/gh-pages/Web%20Photos/Lucho.png)
+
 * Roger León
   * Role: Art Lead & Design
   * Github: [@rleonborras](https://github.com/rleonborras)
-  
-![Rafel Brau]()
+
+![Roger León](https://raw.githubusercontent.com/UnluckyHeroes/Rickme/gh-pages/Web%20Photos/Ruier.png)
+
 * Rafel Brau
   * Role: Art & Design
   * Github: [@Rafefix](https://github.com/Rafefix)
-  
-![Andrés Saladrigas](https://raw.githubusercontent.com/UnluckyHeroes/Rickme/gh-pages/Web%20Photos/Andres.png)
+
+![Rafel Brau]()
+
 * Andrés Saladrigas
   * Role: Art & Design
   * Github: [@TheArzhel](https://github.com/TheArzhel)
 
-![Dídac Romero](https://raw.githubusercontent.com/UnluckyHeroes/Rickme/gh-pages/Web%20Photos/Didac.png)
+![Andrés Saladrigas](https://raw.githubusercontent.com/UnluckyHeroes/Rickme/gh-pages/Web%20Photos/Andres.png)
+
 * Dídac Romero
   * Role: Audio & Music
   * Github: [@DidacRomero](https://github.com/DidacRomero)
 
-![Carles Homs](https://raw.githubusercontent.com/UnluckyHeroes/Rickme/gh-pages/Web%20Photos/KRLS.png)
+![Dídac Romero](https://raw.githubusercontent.com/UnluckyHeroes/Rickme/gh-pages/Web%20Photos/Didac.png)
+
 * Carles Homs 
   * Role: Code Lead
   * Github: [@ch0m5](https://github.com/ch0m5)
 
-![Joan Marí]()
+![Carles Homs](https://raw.githubusercontent.com/UnluckyHeroes/Rickme/gh-pages/Web%20Photos/KRLS.png)
+
 * Joan Marí 
   * Role: Code
   * Github: [@X0KA](https://github.com/X0KA)
 
-![Jaume Avinyó](https://raw.githubusercontent.com/UnluckyHeroes/Rickme/gh-pages/Web%20Photos/James.png)
+![Joan Marí]()
+
 * Jaume Avinyó 
   * Role: QA
   * Github: [@Jaumeavinyo](https://github.com/Jaumeavinyo)
+
+![Jaume Avinyó](https://raw.githubusercontent.com/UnluckyHeroes/Rickme/gh-pages/Web%20Photos/James.png)
 
 ## Contact
 Website: https://goo.gl/iCsdAr
 
 luchosuaya99@gmail.com
 
-GitHub Account: Unlucky Heroes
+GitHub Account: [Unlucky Heroes](https://github.com/UnluckyHeroes)
 
 ## Contributing
 1. Fork it!
