@@ -1,4 +1,4 @@
-# RICKME by Unlucky Heroes
+# Rickme by Unlucky Heroes
 This is a personal project made by CITM (Centre de la Imatge i la Tecnologia Multimedia) students of the TTC (Talent Tech Center) in Barcelona, in which we try to create our own beat'em up game from scratch using C++.
 
 RICKME is a [INSERT SHORT GAME DESCRIPTION].
@@ -33,8 +33,8 @@ feature'`
   * Role: Managment & Design Lead
   * Github: [@lucho1](https://github.com/lucho1)
 
-![Roger León](https://raw.githubusercontent.com/UnluckyHeroes/Rickme/gh-pages/Web%20Photos/Ruier.png)
-* Roger León
+![Roger LeÃ³n](https://raw.githubusercontent.com/UnluckyHeroes/Rickme/gh-pages/Web%20Photos/Ruier.png)
+* Roger LeÃ³n
   * Role: Art Lead & Design
   * Github: [@rleonborras](https://github.com/rleonborras)
   
@@ -43,13 +43,13 @@ feature'`
   * Role: Art & Design
   * Github: [@Rafefix](https://github.com/Rafefix)
   
-![Andrés Saladrigas](https://raw.githubusercontent.com/UnluckyHeroes/Rickme/gh-pages/Web%20Photos/Andres.png)
-* Andrés Saladrigas
+![AndrÃ©s Saladrigas](https://raw.githubusercontent.com/UnluckyHeroes/Rickme/gh-pages/Web%20Photos/Andres.png)
+* AndrÃ©s Saladrigas
   * Role: Art & Design
   * Github: [@TheArzhel](https://github.com/TheArzhel)
 
-![Dídac Romero](https://raw.githubusercontent.com/UnluckyHeroes/Rickme/gh-pages/Web%20Photos/Didac.png)
-* Dídac Romero
+![DÃ­dac Romero](https://raw.githubusercontent.com/UnluckyHeroes/Rickme/gh-pages/Web%20Photos/Didac.png)
+* DÃ­dac Romero
   * Role: Audio & Music
   * Github: [@DidacRomero](https://github.com/DidacRomero)
 
@@ -58,13 +58,13 @@ feature'`
   * Role: Code Lead
   * Github: [@ch0m5](https://github.com/ch0m5)
 
-![Joan Marí]()
-* Joan Marí 
+![Joan MarÃ­]()
+* Joan MarÃ­ 
   * Role: Code
   * Github: [@X0KA](https://github.com/X0KA)
 
-![Jaume Avinyó](https://raw.githubusercontent.com/UnluckyHeroes/Rickme/gh-pages/Web%20Photos/James.png)
-* Jaume Avinyó 
+![Jaume AvinyÃ³](https://raw.githubusercontent.com/UnluckyHeroes/Rickme/gh-pages/Web%20Photos/James.png)
+* Jaume AvinyÃ³ 
   * Role: QA
   * Github: [@Jaumeavinyo](https://github.com/Jaumeavinyo)
 
@@ -78,4 +78,4 @@ GitHub Account: Unlucky Heroes
 
 ## License & Copyright 
 
-© Unlucky Heores
+Â© Unlucky Heores
