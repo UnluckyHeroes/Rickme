@@ -3,7 +3,7 @@ This is a personal project made by CITM (Centre de la Imatge i la Tecnologia Mul
 
 RICKME is a [INSERT SHORT GAME DESCRIPTION].
 
-You can see the full video gameplay (NOT YET) on our [webpage](https://goo.gl/iCsdAr) or clicking this [INSERT_YOUTUBE_LINK].
+You can see the full video gameplay (NOT YET) on our [webpage](https://goo.gl/iCsdAr) or clicking this [link]().
 
 ## Installation
 No previous installation is required to play the game, just download and execute the .exe file *Rickme* from the latest release.
@@ -28,41 +28,46 @@ feature'`
 5. Submit a pull request and we might look into it. :D
 
 ## The Unlucky Heroes Team
+![Luciano Suaya](https://raw.githubusercontent.com/UnluckyHeroes/Rickme/gh-pages/Web%20Photos/Lucho.png)
 * Luciano Suaya
-  * Role: Managment
-  * Github: [@lucho1]()
+  * Role: Managment & Design Lead
+  * Github: [@lucho1](https://github.com/lucho1)
 
+![Roger León](https://raw.githubusercontent.com/UnluckyHeroes/Rickme/gh-pages/Web%20Photos/Ruier.png)
 * Roger León
   * Role: Art Lead & Design
-  * Github: [@rleonborras]()
+  * Github: [@rleonborras](https://github.com/rleonborras)
   
-* Rafel
+![Rafel Brau]()
+* Rafel Brau
   * Role: Art & Design
-  * Github: []()
+  * Github: [@Rafefix](https://github.com/Rafefix)
   
+![Andrés Saladrigas](https://raw.githubusercontent.com/UnluckyHeroes/Rickme/gh-pages/Web%20Photos/Andres.png)
 * Andrés Saladrigas
   * Role: Art & Design
   * Github: [@TheArzhel](https://github.com/TheArzhel)
 
+![Dídac Romero](https://raw.githubusercontent.com/UnluckyHeroes/Rickme/gh-pages/Web%20Photos/Didac.png)
 * Dídac Romero
   * Role: Audio & Music
   * Github: [@DidacRomero](https://github.com/DidacRomero)
-  
+
+![Carles Homs](https://raw.githubusercontent.com/UnluckyHeroes/Rickme/gh-pages/Web%20Photos/KRLS.png)
 * Carles Homs 
   * Role: Code Lead
   * Github: [@ch0m5](https://github.com/ch0m5)
 
+![Joan Marí]()
 * Joan Marí 
   * Role: Code
-  * Github: []()
+  * Github: [@X0KA](https://github.com/X0KA)
 
+![Jaume Avinyó](https://raw.githubusercontent.com/UnluckyHeroes/Rickme/gh-pages/Web%20Photos/James.png)
 * Jaume Avinyó 
   * Role: QA
-  * Github: []()
-  
-![Team Photo]()
-*From left to right: *
- ---
+  * Github: [@Jaumeavinyo](https://github.com/Jaumeavinyo)
+
  ## Contact
 
 Web Page: https://goo.gl/iCsdAr
