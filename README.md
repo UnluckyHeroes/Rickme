@@ -60,8 +60,8 @@ GitHub Account: [Unlucky Heroes](https://github.com/UnluckyHeroes)
 ## Contributing
 1. Fork it!
 2. Create your feature branch: `git checkout -b my-newfeature` (also you can directly do it in the web)
-3. Commit your changes: `git commit -am 'Add some feature'
-4. Push to the branch: `git push origin my-new-feature'
+3. Commit your changes: `git commit -am 'Add some feature`
+4. Push to the branch: `git push origin my-new-feature`
 5. Submit a pull request and we might look into it. :D
 
 ## License & Copyright 
