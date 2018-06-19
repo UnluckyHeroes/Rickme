@@ -22,6 +22,8 @@ No previous installation is required to play the game, just download the latest 
 
 \---------------------- Debug Mode ----------------------/
 
+\----------------- BUGS -----------------/
+If you find a bug in the game, please send us an e-mail (you will find the e-mail downwards in contact) or go to our GitHub, at the Issues tab and report a bug following the steps explained there. Thank You! It will help us a lot.
 
 \------------------- UPDATES ------------------/
 
@@ -43,6 +45,12 @@ Rafel Brau (@rafefix)
 
 Joan Marín (@X0KA)
 
+\----------------- CONTRIBUTING -----------------/
+1. Fork it!
+2. Create your feature branch: `git checkout -b my-newfeature` (also you can directly do it in the web)
+3. Commit your changes: `git commit -am 'Add some feature'
+4. Push to the branch: `git push origin my-new-feature`
+5. Submit a pull request and we might look into it :D
 
 \----------------- CONTACT -----------------/
 
@@ -51,6 +59,12 @@ Web Page: https://goo.gl/iCsdAr
 luchosuaya99@gmail.com
 
 GitHub Account: Unlucky Heroes
+
+\----------------- LICENSE AND COPYRIGHT -----------------/
+
+© Unlucky Heroes
+
+Licensed under the MIT License (https://github.com/UnluckyHeroes/Rickme/blob/master/LICENSE)
 
 
 
