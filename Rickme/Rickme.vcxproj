@@ -131,7 +131,6 @@
     <ClInclude Include="ModuleFadeToBlack.h" />
     <ClInclude Include="ModuleFont.h" />
     <ClInclude Include="ModuleInput.h" />
-    <ClInclude Include="ModuleMainMenu.h" />
     <ClInclude Include="ModuleMixer.h" />
     <ClInclude Include="ModuleParticles.h" />
     <ClInclude Include="ModulePlayer1.h" />
@@ -155,7 +154,6 @@
     <ClCompile Include="ModuleFadeToBlack.cpp" />
     <ClCompile Include="ModuleFont.cpp" />
     <ClCompile Include="ModuleInput.cpp" />
-    <ClCompile Include="ModuleMainMenu.cpp" />
     <ClCompile Include="ModuleMixer.cpp" />
     <ClCompile Include="ModuleParticles.cpp" />
     <ClCompile Include="ModulePlayer1.cpp" />
