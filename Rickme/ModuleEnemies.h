@@ -1,10 +1,7 @@
 #ifndef __ModuleEnemies_H__
 #define __ModuleEnemies_H__
 
-#include "Module.h"			// Following: Includes of all enemy headers
-#include "Enemy_13_Greyball.h"
-#include "RedLineShip_Enemy.h"
-#include "PowerUp_Enemy.h"
+#include "Module.h"
 #include "SDL_mixer/include/SDL_mixer.h"
 
 #define MAX_ENEMIES 500
@@ -12,30 +9,9 @@
 enum ENEMY_TYPES
 {
 	NO_TYPE,
-	GREYBALL_UP_DOWN,
-	GREYBALL_S,
-	GREYBALL_K,
-	REDLINE_SHIP,
-	POWERUP_ENEMY,
-	BIGGREY_ENEMY,
-	GREY_YELLOW_SHIP,
-	YELLOWSHIP_UP,
-	YELLOWSHIP_DOWN,
-	POWERUP_BONUS,
-	SHURIKEN_ENEMY,
-	SILVER_ROUND,
-	SILVER_ROUND_DOWN,
-	DOWN_WHITEORANGETURRET,
-	DRILL_UP,
-	DRILL_DOWN,
-	GREYBALL_CIRCLE,
-	YELLOWSHIP_RIGHT_UP,
-	YELLOWSHIP_RIGHT_DOWN,
-	ROCKSUBBOSS,
-	SUBBOSS2,
-	GREENSUBBOSS
+	ENEMY_EXAMPLE,
 
-
+	ENEMY_MAX
 };
 
 class Enemy;
@@ -62,11 +38,7 @@ public:
 
 	bool AddEnemy(ENEMY_TYPES type, int x, int y);
 
-	Mix_Chunk *explosion1 = nullptr;
-	Mix_Chunk *explosion2 = nullptr;
-	Mix_Chunk *enemyHit = nullptr;
-
-
+	//Mix_Chunk *explosion1 = nullptr;
 
 private:
 

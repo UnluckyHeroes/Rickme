@@ -53,20 +53,19 @@ update_status ModuleRender::PreUpdate()
 
 update_status ModuleRender::Update()	// Used for the camera movement, reacts to keys pressed to move the screen around (window != screen)
 {
+	/*int speed = 10;
 
-	//int speed = 10;
+	if (App->input->keyboard[SDL_SCANCODE_U] == KEY_REPEAT)
+		camera.y += speed;
 
-	//if (App->input->keyboard[SDL_SCANCODE_U] == KEY_REPEAT)
-	//	camera.y += speed;
+	if (App->input->keyboard[SDL_SCANCODE_J] == KEY_REPEAT)
+		camera.y -= speed;
 
-	//if (App->input->keyboard[SDL_SCANCODE_J] == KEY_REPEAT)
-	//	camera.y -= speed;
+	if (App->input->keyboard[SDL_SCANCODE_K] == KEY_REPEAT)
+		camera.x -= speed;
 
-	//if (App->input->keyboard[SDL_SCANCODE_K] == KEY_REPEAT)
-	//	camera.x -= speed;
-
-	//if (App->input->keyboard[SDL_SCANCODE_H] == KEY_REPEAT)
-	//	camera.x += speed;
+	if (App->input->keyboard[SDL_SCANCODE_H] == KEY_REPEAT)
+		camera.x += speed;*/
 
 
 	return update_status::UPDATE_CONTINUE;

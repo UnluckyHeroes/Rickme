@@ -93,9 +93,6 @@
     <ClInclude Include="ModuleMixer.h">
       <Filter>GameCore\CoreModules</Filter>
     </ClInclude>
-    <ClInclude Include="ModulePlayer2.h">
-      <Filter>GameModules\ModulesPlayers</Filter>
-    </ClInclude>
     <ClInclude Include="ModulePlayer1.h">
       <Filter>GameModules\ModulesPlayers</Filter>
     </ClInclude>
@@ -162,9 +159,6 @@
       <Filter>GameCore\CoreModules</Filter>
     </ClCompile>
     <ClCompile Include="ModulePlayer1.cpp">
-      <Filter>GameModules\ModulesPlayers</Filter>
-    </ClCompile>
-    <ClCompile Include="ModulePlayer2.cpp">
       <Filter>GameModules\ModulesPlayers</Filter>
     </ClCompile>
     <ClCompile Include="ModuleMainMenu.cpp">

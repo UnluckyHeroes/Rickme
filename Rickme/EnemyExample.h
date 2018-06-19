@@ -2,7 +2,7 @@
 #define __POWERUP_ENEMY_H__
 
 #include "Enemy.h"
-#include "NewPath.h"
+#include "Path.h"
 
 class PowerUp_Enemy : public Enemy
 {

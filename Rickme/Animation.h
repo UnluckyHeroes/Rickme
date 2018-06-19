@@ -2,7 +2,7 @@
 #define __ANIMATION_H__
 
 #include "Globals.h"
-#define MAX_FRAMES 150
+#define MAX_FRAMES 150	// Dynamical array?
 
 class Animation
 {
