@@ -12,43 +12,43 @@ Soon you will see the full gameplay on our [website](https://goo.gl/iCsdAr) or c
 ## The Unlucky Heroes Team
 ![Lucho Suaya](https://raw.githubusercontent.com/UnluckyHeroes/Rickme/gh-pages/Web%20Photos/Lucho.png)
 * Lucho Suaya
-  * Role: Managment & Design Lead
-  * Github: [@lucho1](https://github.com/lucho1)
+  * **Role:** Managment & Design Lead
+  * **Github:** [@lucho1](https://github.com/lucho1)
 
 ![Roger León](https://raw.githubusercontent.com/UnluckyHeroes/Rickme/gh-pages/Web%20Photos/Ruier.png)
 * Roger León
-  * Role: Art Lead & Design
-  * Github: [@rleonborras](https://github.com/rleonborras)
+  * **Role:** Art Lead & Design
+  * **Github:** [@rleonborras](https://github.com/rleonborras)
 
 ![Rafel Brau](https://github.com/UnluckyHeroes/Rickme/blob/gh-pages/Web%20Photos/Rafel.png)
 * Rafel Brau
-  * Role: Art & Design
-  * Github: [@Rafefix](https://github.com/Rafefix)
+  * **Role:** Art & Design
+  * **Github:** [@Rafefix](https://github.com/Rafefix)
 
 ![Andrés Saladrigas](https://raw.githubusercontent.com/UnluckyHeroes/Rickme/gh-pages/Web%20Photos/Andres.png)
 * Andrés Saladrigas
-  * Role: Art & Design
-  * Github: [@TheArzhel](https://github.com/TheArzhel)
+  * **Role:** Art & Design
+  * **Github:** [@TheArzhel](https://github.com/TheArzhel)
 
 ![Dídac Romero](https://raw.githubusercontent.com/UnluckyHeroes/Rickme/gh-pages/Web%20Photos/Didac.png)
 * Dídac Romero
-  * Role: Audio Lead & Programmer
-  * Github: [@DidacRomero](https://github.com/DidacRomero)
+  * **Role:** Audio Lead & Programmer
+  * **Github:** [@DidacRomero](https://github.com/DidacRomero)
 
 ![Carles Homs](https://raw.githubusercontent.com/UnluckyHeroes/Rickme/gh-pages/Web%20Photos/KRLS.png)
 * Carles Homs 
-  * Role: Lead Programmer
-  * Github: [@ch0m5](https://github.com/ch0m5)
+  * **Role:** Lead Programmer
+  * **Github:** [@ch0m5](https://github.com/ch0m5)
 
 ![Joan Marín](https://github.com/UnluckyHeroes/Rickme/blob/gh-pages/Web%20Photos/Joan.png)
 * Joan Marín 
   * Role: Programming
-  * Github: [@X0KA](https://github.com/X0KA)
+  * **Github:** [@X0KA](https://github.com/X0KA)
 
 ![Jaume Avinyó](https://raw.githubusercontent.com/UnluckyHeroes/Rickme/gh-pages/Web%20Photos/James.png)
 * Jaume Avinyó 
-  * Role: QA Lead & Programmer
-  * Github: [@Jaumeavinyo](https://github.com/Jaumeavinyo)
+  * **Role:** QA Lead & Programmer
+  * **Github:** [@Jaumeavinyo](https://github.com/Jaumeavinyo)
 
 ## Contact
 Website: https://goo.gl/iCsdAr
