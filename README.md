@@ -42,7 +42,7 @@ Soon you will see the full gameplay on our [website](https://goo.gl/iCsdAr) or c
 
 ![Joan Marín](https://github.com/UnluckyHeroes/Rickme/blob/gh-pages/Web%20Photos/Joan.png)
 * Joan Marín 
-  * Role: Programming
+  * **Role:** Programming
   * **Github:** [@X0KA](https://github.com/X0KA)
 
 ![Jaume Avinyó](https://raw.githubusercontent.com/UnluckyHeroes/Rickme/gh-pages/Web%20Photos/James.png)
