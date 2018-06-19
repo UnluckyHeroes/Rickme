@@ -39,6 +39,10 @@ Dídac Romero (@DidacRomero)
 
 Jaume Avinyó (@Jaumeavinyo)
 
+Rafel Brau (@rafefix)
+
+Joan Marín (@X0KA)
+
 
 \----------------- CONTACT -----------------/
 
