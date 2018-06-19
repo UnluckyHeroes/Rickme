@@ -3,125 +3,100 @@
 #include "ModuleRender.h"
 #include "ModuleCollision.h"
 
-ModuleCollision::ModuleCollision()
+ModuleCollision::ModuleCollision()	// @CarlesHoms
 {
 	for (uint i = 0; i < MAX_COLLIDERS; ++i)
 		colliders[i] = nullptr;
 
 	matrix[COLLIDER_WALL][COLLIDER_WALL] = false;
 	matrix[COLLIDER_WALL][COLLIDER_PLAYER] = true;
-	matrix[COLLIDER_WALL][COLLIDER_PLAYER_2] = true;
-	matrix[COLLIDER_WALL][COLLIDER_ENEMY] = false;
+	matrix[COLLIDER_WALL][COLLIDER_PLAYER_ATTACK] = false;
 	matrix[COLLIDER_WALL][COLLIDER_PLAYER_SHOT] = true;
-	matrix[COLLIDER_WALL][COLLIDER_PLAYER_2_SHOT] = true;
+	matrix[COLLIDER_WALL][COLLIDER_ENEMY] = false;
+	matrix[COLLIDER_WALL][COLLIDER_ENEMY_ATTACK] = false;
 	matrix[COLLIDER_WALL][COLLIDER_ENEMY_SHOT] = true;
+	matrix[COLLIDER_WALL][COLLIDER_POWERUP] = true;
+	matrix[COLLIDER_WALL][COLLIDER_PLAYER_SHIELD] = false;
 
 	matrix[COLLIDER_PLAYER][COLLIDER_WALL] = true;
 	matrix[COLLIDER_PLAYER][COLLIDER_PLAYER] = false;
-	matrix[COLLIDER_PLAYER][COLLIDER_PLAYER_2] = false;
-	matrix[COLLIDER_PLAYER][COLLIDER_ENEMY] = true;
+	matrix[COLLIDER_PLAYER][COLLIDER_PLAYER_ATTACK] = false;
 	matrix[COLLIDER_PLAYER][COLLIDER_PLAYER_SHOT] = false;
-	matrix[COLLIDER_PLAYER][COLLIDER_PLAYER_2_SHOT] = false;
+	matrix[COLLIDER_PLAYER][COLLIDER_ENEMY] = true;
+	matrix[COLLIDER_PLAYER][COLLIDER_ENEMY_ATTACK] = true;
 	matrix[COLLIDER_PLAYER][COLLIDER_ENEMY_SHOT] = true;
+	matrix[COLLIDER_PLAYER][COLLIDER_POWERUP] = true;
+	matrix[COLLIDER_PLAYER][COLLIDER_PLAYER_SHIELD] = false;
 
-	matrix[COLLIDER_PLAYER_2][COLLIDER_WALL] = true;
-	matrix[COLLIDER_PLAYER_2][COLLIDER_PLAYER] = false;
-	matrix[COLLIDER_PLAYER_2][COLLIDER_PLAYER_2] = false;
-	matrix[COLLIDER_PLAYER_2][COLLIDER_ENEMY] = true;
-	matrix[COLLIDER_PLAYER_2][COLLIDER_PLAYER_SHOT] = false;
-	matrix[COLLIDER_PLAYER_2][COLLIDER_PLAYER_2_SHOT] = false;
-	matrix[COLLIDER_PLAYER_2][COLLIDER_ENEMY_SHOT] = true;
-
-	matrix[COLLIDER_ENEMY][COLLIDER_WALL] = false;
-	matrix[COLLIDER_ENEMY][COLLIDER_PLAYER] = true;
-	matrix[COLLIDER_ENEMY][COLLIDER_PLAYER_2] = true;
-	matrix[COLLIDER_ENEMY][COLLIDER_ENEMY] = false;
-	matrix[COLLIDER_ENEMY][COLLIDER_PLAYER_SHOT] = true;
-	matrix[COLLIDER_ENEMY][COLLIDER_PLAYER_2_SHOT] = true;
-	matrix[COLLIDER_ENEMY][COLLIDER_ENEMY_SHOT] = false;
+	matrix[COLLIDER_PLAYER_ATTACK][COLLIDER_WALL] = false;
+	matrix[COLLIDER_PLAYER_ATTACK][COLLIDER_PLAYER] = false;
+	matrix[COLLIDER_PLAYER_ATTACK][COLLIDER_PLAYER_ATTACK] = false;
+	matrix[COLLIDER_PLAYER_ATTACK][COLLIDER_PLAYER_SHOT] = false;
+	matrix[COLLIDER_PLAYER_ATTACK][COLLIDER_ENEMY] = true;
+	matrix[COLLIDER_PLAYER_ATTACK][COLLIDER_ENEMY_ATTACK] = false;
+	matrix[COLLIDER_PLAYER_ATTACK][COLLIDER_ENEMY_SHOT] = false;
+	matrix[COLLIDER_PLAYER_ATTACK][COLLIDER_POWERUP] = false;
+	matrix[COLLIDER_PLAYER_ATTACK][COLLIDER_PLAYER_SHIELD] = false;
 
 	matrix[COLLIDER_PLAYER_SHOT][COLLIDER_WALL] = true;
 	matrix[COLLIDER_PLAYER_SHOT][COLLIDER_PLAYER] = false;
-	matrix[COLLIDER_PLAYER_SHOT][COLLIDER_PLAYER_2] = false;
-	matrix[COLLIDER_PLAYER_SHOT][COLLIDER_ENEMY] = true;
+	matrix[COLLIDER_PLAYER_SHOT][COLLIDER_PLAYER_ATTACK] = false;
 	matrix[COLLIDER_PLAYER_SHOT][COLLIDER_PLAYER_SHOT] = false;
-	matrix[COLLIDER_PLAYER_SHOT][COLLIDER_PLAYER_2_SHOT] = false;
+	matrix[COLLIDER_PLAYER_SHOT][COLLIDER_ENEMY] = true;
+	matrix[COLLIDER_PLAYER_SHOT][COLLIDER_ENEMY_ATTACK] = false;
 	matrix[COLLIDER_PLAYER_SHOT][COLLIDER_ENEMY_SHOT] = false;
-
-	matrix[COLLIDER_PLAYER_2_SHOT][COLLIDER_WALL] = true;
-	matrix[COLLIDER_PLAYER_2_SHOT][COLLIDER_PLAYER] = false;
-	matrix[COLLIDER_PLAYER_2_SHOT][COLLIDER_PLAYER_2] = false;
-	matrix[COLLIDER_PLAYER_2_SHOT][COLLIDER_ENEMY] = true;
-	matrix[COLLIDER_PLAYER_2_SHOT][COLLIDER_PLAYER_SHOT] = false;
-	matrix[COLLIDER_PLAYER_2_SHOT][COLLIDER_PLAYER_2_SHOT] = false;
-	matrix[COLLIDER_PLAYER_2_SHOT][COLLIDER_ENEMY_SHOT] = false;
-
-
-	matrix[COLLIDER_ENEMY_SHOT][COLLIDER_WALL] = true;
-	matrix[COLLIDER_ENEMY_SHOT][COLLIDER_PLAYER] = true;
-	matrix[COLLIDER_ENEMY_SHOT][COLLIDER_PLAYER_2] = true;
-	matrix[COLLIDER_ENEMY_SHOT][COLLIDER_ENEMY] = false;
-	matrix[COLLIDER_ENEMY_SHOT][COLLIDER_PLAYER_SHOT] = false;
-	matrix[COLLIDER_ENEMY_SHOT][COLLIDER_PLAYER_2_SHOT] = false;
-	matrix[COLLIDER_ENEMY_SHOT][COLLIDER_ENEMY_SHOT] = false;
-
-	// @XaviMarin
-	matrix[COLLIDER_POWERUP][COLLIDER_WALL] = false;
-	matrix[COLLIDER_POWERUP][COLLIDER_PLAYER] = true;
-	matrix[COLLIDER_POWERUP][COLLIDER_PLAYER_2] = true;
-	matrix[COLLIDER_POWERUP][COLLIDER_ENEMY] = false;
-	matrix[COLLIDER_POWERUP][COLLIDER_PLAYER_SHOT] = false;
-	matrix[COLLIDER_POWERUP][COLLIDER_PLAYER_2_SHOT] = false;
-	matrix[COLLIDER_POWERUP][COLLIDER_ENEMY_SHOT] = false;
-	matrix[COLLIDER_POWERUP][COLLIDER_POWERUP] = false;
-	matrix[COLLIDER_POWERUP][COLLIDER_PLAYER_INV] = true;
-	matrix[COLLIDER_POWERUP][COLLIDER_PLAYER_2_INV] = true;
-
-
-	matrix[COLLIDER_ENEMY_SHOT][COLLIDER_POWERUP] = false;
-	matrix[COLLIDER_PLAYER_2_SHOT][COLLIDER_POWERUP] = false;
 	matrix[COLLIDER_PLAYER_SHOT][COLLIDER_POWERUP] = false;
-	matrix[COLLIDER_ENEMY][COLLIDER_POWERUP] = false;
-	matrix[COLLIDER_PLAYER][COLLIDER_POWERUP] = true;
-	//matrix[COLLIDER_PLAYER_2][COLLIDER_POWERUP] = true;	// This was missing, if something fucks up maybe is because of this line, try to uncomment it
-	matrix[COLLIDER_WALL][COLLIDER_POWERUP] = false;
-
-	matrix[COLLIDER_PLAYER_SHIELD][COLLIDER_WALL] = false;	//@CarlesHoms
-	matrix[COLLIDER_PLAYER_SHIELD][COLLIDER_PLAYER] = false;
-	matrix[COLLIDER_PLAYER_SHIELD][COLLIDER_PLAYER_2] = false;
-	matrix[COLLIDER_PLAYER_SHIELD][COLLIDER_ENEMY] = true;
-	matrix[COLLIDER_PLAYER_SHIELD][COLLIDER_PLAYER_SHOT] = false;
-	matrix[COLLIDER_PLAYER_SHIELD][COLLIDER_PLAYER_2_SHOT] = false;
-	matrix[COLLIDER_PLAYER_SHIELD][COLLIDER_ENEMY_SHOT] = true;
-	matrix[COLLIDER_PLAYER_SHIELD][COLLIDER_PLAYER_SHIELD] = false;
-
-	matrix[COLLIDER_WALL][COLLIDER_PLAYER_SHIELD] = false;	//@CarlesHoms
-	matrix[COLLIDER_PLAYER][COLLIDER_PLAYER_SHIELD] = false;
-	matrix[COLLIDER_PLAYER_2][COLLIDER_PLAYER_SHIELD] = false;
-	matrix[COLLIDER_ENEMY][COLLIDER_PLAYER_SHIELD] = true;
 	matrix[COLLIDER_PLAYER_SHOT][COLLIDER_PLAYER_SHIELD] = false;
-	matrix[COLLIDER_PLAYER_2_SHOT][COLLIDER_PLAYER_SHIELD] = false;
+
+	matrix[COLLIDER_ENEMY][COLLIDER_WALL] = false;
+	matrix[COLLIDER_ENEMY][COLLIDER_PLAYER] = true;
+	matrix[COLLIDER_ENEMY][COLLIDER_PLAYER_ATTACK] = true;
+	matrix[COLLIDER_ENEMY][COLLIDER_PLAYER_SHOT] = true;
+	matrix[COLLIDER_ENEMY][COLLIDER_ENEMY] = false;
+	matrix[COLLIDER_ENEMY][COLLIDER_ENEMY_ATTACK] = false;
+	matrix[COLLIDER_ENEMY][COLLIDER_ENEMY_SHOT] = false;
+	matrix[COLLIDER_ENEMY][COLLIDER_POWERUP] = false;
+	matrix[COLLIDER_ENEMY][COLLIDER_PLAYER_SHIELD] = true;
+
+	matrix[COLLIDER_ENEMY_ATTACK][COLLIDER_WALL] = false;
+	matrix[COLLIDER_ENEMY_ATTACK][COLLIDER_PLAYER] = true;
+	matrix[COLLIDER_ENEMY_ATTACK][COLLIDER_PLAYER_ATTACK] = false;
+	matrix[COLLIDER_ENEMY_ATTACK][COLLIDER_PLAYER_SHOT] = false;
+	matrix[COLLIDER_ENEMY_ATTACK][COLLIDER_ENEMY] = false;
+	matrix[COLLIDER_ENEMY_ATTACK][COLLIDER_ENEMY_ATTACK] = false;
+	matrix[COLLIDER_ENEMY_ATTACK][COLLIDER_ENEMY_SHOT] = false;
+	matrix[COLLIDER_ENEMY_ATTACK][COLLIDER_POWERUP] = false;
+	matrix[COLLIDER_ENEMY_ATTACK][COLLIDER_PLAYER_SHIELD] = true;
+
+	matrix[COLLIDER_ENEMY_SHOT][COLLIDER_WALL] = false;
+	matrix[COLLIDER_ENEMY_SHOT][COLLIDER_PLAYER] = true;
+	matrix[COLLIDER_ENEMY_SHOT][COLLIDER_PLAYER_ATTACK] = false;
+	matrix[COLLIDER_ENEMY_SHOT][COLLIDER_PLAYER_SHOT] = false;
+	matrix[COLLIDER_ENEMY_SHOT][COLLIDER_ENEMY] = false;
+	matrix[COLLIDER_ENEMY_SHOT][COLLIDER_ENEMY_ATTACK] = false;
+	matrix[COLLIDER_ENEMY_SHOT][COLLIDER_ENEMY_SHOT] = false;
+	matrix[COLLIDER_ENEMY_SHOT][COLLIDER_POWERUP] = false;
 	matrix[COLLIDER_ENEMY_SHOT][COLLIDER_PLAYER_SHIELD] = true;
 
-	matrix[COLLIDER_PLAYER_INV][COLLIDER_WALL] = false;
-	matrix[COLLIDER_PLAYER_INV][COLLIDER_PLAYER] = false;
-	matrix[COLLIDER_PLAYER_INV][COLLIDER_PLAYER_2] = false;
-	matrix[COLLIDER_PLAYER_INV][COLLIDER_ENEMY] = false;
-	matrix[COLLIDER_PLAYER_INV][COLLIDER_PLAYER_SHOT] = false;
-	matrix[COLLIDER_PLAYER_INV][COLLIDER_PLAYER_2_SHOT] = false;
-	matrix[COLLIDER_PLAYER_INV][COLLIDER_ENEMY_SHOT] = false;
-	matrix[COLLIDER_PLAYER_INV][COLLIDER_POWERUP] = true;
-	matrix[COLLIDER_PLAYER_INV][COLLIDER_PLAYER_2_INV] = false;
+	matrix[COLLIDER_POWERUP][COLLIDER_WALL] = true;
+	matrix[COLLIDER_POWERUP][COLLIDER_PLAYER] = true;
+	matrix[COLLIDER_POWERUP][COLLIDER_PLAYER_ATTACK] = false;
+	matrix[COLLIDER_POWERUP][COLLIDER_PLAYER_SHOT] = false;
+	matrix[COLLIDER_POWERUP][COLLIDER_ENEMY] = false;
+	matrix[COLLIDER_POWERUP][COLLIDER_ENEMY_ATTACK] = false;
+	matrix[COLLIDER_POWERUP][COLLIDER_ENEMY_SHOT] = false;
+	matrix[COLLIDER_POWERUP][COLLIDER_POWERUP] = false;
+	matrix[COLLIDER_POWERUP][COLLIDER_PLAYER_SHIELD] = false;
 
-	matrix[COLLIDER_PLAYER_2_INV][COLLIDER_WALL] = false;
-	matrix[COLLIDER_PLAYER_2_INV][COLLIDER_PLAYER] = false;
-	matrix[COLLIDER_PLAYER_2_INV][COLLIDER_PLAYER_2] = false;
-	matrix[COLLIDER_PLAYER_2_INV][COLLIDER_ENEMY] = false;
-	matrix[COLLIDER_PLAYER_2_INV][COLLIDER_PLAYER_SHOT] = false;
-	matrix[COLLIDER_PLAYER_2_INV][COLLIDER_PLAYER_2_SHOT] = false;
-	matrix[COLLIDER_PLAYER_2_INV][COLLIDER_ENEMY_SHOT] = false;
-	matrix[COLLIDER_PLAYER_2_INV][COLLIDER_POWERUP] = true;
-	matrix[COLLIDER_PLAYER_2_INV][COLLIDER_PLAYER_INV] = false;
+	matrix[COLLIDER_PLAYER_SHIELD][COLLIDER_WALL] = false;
+	matrix[COLLIDER_PLAYER_SHIELD][COLLIDER_PLAYER] = false;
+	matrix[COLLIDER_PLAYER_SHIELD][COLLIDER_PLAYER_ATTACK] = false;
+	matrix[COLLIDER_PLAYER_SHIELD][COLLIDER_PLAYER_SHOT] = false;
+	matrix[COLLIDER_PLAYER_SHIELD][COLLIDER_ENEMY] = true;
+	matrix[COLLIDER_PLAYER_SHIELD][COLLIDER_ENEMY_ATTACK] = true;
+	matrix[COLLIDER_PLAYER_SHIELD][COLLIDER_ENEMY_SHOT] = true;
+	matrix[COLLIDER_PLAYER_SHIELD][COLLIDER_POWERUP] = false;
+	matrix[COLLIDER_PLAYER_SHIELD][COLLIDER_PLAYER_SHIELD] = false;
 
 
 	//screen parameter to render bellow and avoid green background @Andres
@@ -216,34 +191,27 @@ void ModuleCollision::DebugDraw()
 		case COLLIDER_PLAYER: // green
 			App->render->DrawQuad(colliders[i]->rect, 0, 255, 0, alpha);
 			break;
-		case COLLIDER_PLAYER_2: // green
-			App->render->DrawQuad(colliders[i]->rect, 0, 255, 0, alpha);
-			break;
-		case COLLIDER_ENEMY: // red
-			App->render->DrawQuad(colliders[i]->rect, 255, 0, 0, alpha);
+		case COLLIDER_PLAYER_ATTACK: // yellow
+			App->render->DrawQuad(colliders[i]->rect, 255, 255, 0, alpha);
 			break;
 		case COLLIDER_PLAYER_SHOT: // yellow
 			App->render->DrawQuad(colliders[i]->rect, 255, 255, 0, alpha);
 			break;
-		case COLLIDER_PLAYER_2_SHOT: // yellow
-			App->render->DrawQuad(colliders[i]->rect, 255, 255, 0, alpha);
+		case COLLIDER_ENEMY: // red
+			App->render->DrawQuad(colliders[i]->rect, 255, 0, 0, alpha);
+			break;
+		case COLLIDER_ENEMY_ATTACK: // magenta
+			App->render->DrawQuad(colliders[i]->rect, 255, 0, 255, alpha);
 			break;
 		case COLLIDER_ENEMY_SHOT: // magenta
-			App->render->DrawQuad(colliders[i]->rect, 255, 0, 255, alphaHard);
+			App->render->DrawQuad(colliders[i]->rect, 255, 0, 255, alpha);
 			break;
-		case COLLIDER_POWERUP: // BROWN
-			App->render->DrawQuad(colliders[i]->rect, 160, 128, 96, alpha);
+		case COLLIDER_POWERUP: // cyan
+			App->render->DrawQuad(colliders[i]->rect, 0, 255, 255, alpha);
 			break;
-		case COLLIDER_PLAYER_SHIELD: // cyan
-			App->render->DrawQuad(colliders[i]->rect, 0, 255, 255, alpha);	//@CarlesHoms
+		case COLLIDER_PLAYER_SHIELD: // olive green
+			App->render->DrawQuad(colliders[i]->rect, 170, 255, 0, alpha);
 			break;
-		case (COLLIDER_PLAYER_INV):
-			App->render->DrawQuad(colliders[i]->rect, 255, 255, 128, alpha);	//White/Yellow/Brown
-			break;
-		case (COLLIDER_PLAYER_2_INV):
-			App->render->DrawQuad(colliders[i]->rect, 255, 255, 128, alpha);	//White/Yellow/Brown
-			break;
-
 		}
 	}
 }

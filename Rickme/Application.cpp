@@ -5,14 +5,14 @@
 #include "ModuleTextures.h"
 #include "ModuleMixer.h"
 #include "ModuleFadeToBlack.h"
-
-#include "ModulePlayer.h"
 #include "ModuleParticles.h"
-#include "ModuleMainMenu.h"
-#include "ModuleEnemies.h"
 #include "ModuleFont.h"
 #include "ModuleUserInterface.h"
+//#include "Module_Audio.h"
 
+#include "ModulePlayer1.h"
+#include "ModuleMainMenu.h"
+#include "ModuleEnemies.h"
 
 Application::Application()
 {
@@ -22,18 +22,17 @@ Application::Application()
 	modules[i++] = input = new ModuleInput();
 	modules[i++] = textures = new ModuleTextures();
 	modules[i++] = mixer = new ModuleMixer();
-
-	modules[i++] = mainMenu = new ModuleMainMenu();
+	//modules[i++] = audio = new Module_Audio();
+	//modules[i++] = mainMenu = new ModuleMainMenu();
+	//modules[i++] = scoreboard = new ModuleScoreboard();
 	modules[i++] = particles = new ModuleParticles();
 	modules[i++] = enemies = new ModuleEnemies();
-
-	modules[i++] = player2 = new ModulePlayer();
-	modules[i++] = player1 = new ModulePlayer();
+	//modules[i++] = player2 = new ModulePlayer();
+	//modules[i++] = player1 = new ModulePlayer1();
 	modules[i++] = collision = new ModuleCollision();
-	modules[i++] = fade = new ModuleFadeToBlack();
-	modules[i++] = fonts = new ModuleFont();
 	modules[i++] = UI = new ModuleUserInterface();
-	modules[i++] = Bosses = new ModuleBoss();
+	modules[i++] = fonts = new ModuleFont();
+	modules[i++] = fade = new ModuleFadeToBlack();
 }
 
 Application::~Application()
@@ -46,21 +45,15 @@ bool Application::Init()
 {
 	bool ret = true;
 
-	// Characters will be disabled on the first update of a new scene
-	player1->Disable();
-	player2->Disable();
+	// Disable all non-core modules that will be enabled later in the game
+	
+	//player1->Disable();
+	//player2->Disable();
 	enemies->Disable();
-	Bosses->Disable();
-	shieldsP1->Disable();
-	shieldsP2->Disable();
 
-	// Disable all maps that you do not start with
-	stage1->Disable();
-	stage2->Disable();
-	scene_HiScore->Disable();
-	stageClear->Disable();
-	// Disable collisions
-	collision->Disable();
+	// Disable all screens
+	//mainMenu->Disable();
+	//scoreboard->Disable();
 
 	for (int i = 0; i < NUM_MODULES && ret == true; ++i)
 		ret = modules[i]->Init();
