@@ -1,27 +1,17 @@
-# Rickme by Unlucky Heroes
-This is a personal project made by CITM (Centre de la Imatge i la Tecnologia Multimedia) students of the TTC (Talent Tech Center) in Barcelona, in which we try to create our own beat'em up game from scratch using C++.
+# Rickme
+This is a personal project made by [Unlucky Heroes](https://goo.gl/iCsdAr) team from [CITM](https://www.citm.upc.edu/) students of the [Politechical University of Catalonia](http://www.upc.edu/ca) in Barcelona, in which we create our own game from scratch using C++.
 
-RICKME is a [INSERT SHORT GAME DESCRIPTION].
+RICKME is a beat ‘em up game in which the videogames developer Rick Pillosu has to get on time to the E3 presentation with a stable build. In order to do it, he has to go through the way cleaning the build from bugs and other problems and has to pick and update the readme.md document, which works as a virtual coin to upgrade Rick’s skills.
 
-You can see the full video gameplay (NOT YET) on our [website](https://goo.gl/iCsdAr) or clicking this [link]().
+Soon you will see the full gameplay on our [website](https://goo.gl/iCsdAr) or clicking this [link]().
 
-## Installation
-No previous installation is required to play the game, just download and execute the .exe file *Rickme* from the latest release.
+**Current Game Version:** v0.0
 
-## Usage
-### General Controls
-
-### Player Controls
-
-### Debug Mode
-
-## Updates
-### Current Version: v0.0
-### Updates From Last Version
+## Updates From Last Version
 
 ## The Unlucky Heroes Team
-![Luciano Suaya](https://raw.githubusercontent.com/UnluckyHeroes/Rickme/gh-pages/Web%20Photos/Lucho.png)
-* Luciano Suaya
+![Lucho Suaya](https://raw.githubusercontent.com/UnluckyHeroes/Rickme/gh-pages/Web%20Photos/Lucho.png)
+* Lucho Suaya
   * Role: Managment & Design Lead
   * Github: [@lucho1](https://github.com/lucho1)
 
@@ -30,7 +20,7 @@ No previous installation is required to play the game, just download and execute
   * Role: Art Lead & Design
   * Github: [@rleonborras](https://github.com/rleonborras)
 
-![Rafel Brau]()
+![Rafel Brau](https://github.com/UnluckyHeroes/Rickme/blob/gh-pages/Web%20Photos/Rafel.png)
 * Rafel Brau
   * Role: Art & Design
   * Github: [@Rafefix](https://github.com/Rafefix)
@@ -42,22 +32,22 @@ No previous installation is required to play the game, just download and execute
 
 ![Dídac Romero](https://raw.githubusercontent.com/UnluckyHeroes/Rickme/gh-pages/Web%20Photos/Didac.png)
 * Dídac Romero
-  * Role: Audio & Music
+  * Role: Audio Lead & Programmer
   * Github: [@DidacRomero](https://github.com/DidacRomero)
 
 ![Carles Homs](https://raw.githubusercontent.com/UnluckyHeroes/Rickme/gh-pages/Web%20Photos/KRLS.png)
 * Carles Homs 
-  * Role: Code Lead
+  * Role: Lead Programmer
   * Github: [@ch0m5](https://github.com/ch0m5)
 
-![Joan Marí]()
-* Joan Marí 
-  * Role: Code
+![Joan Marín](https://github.com/UnluckyHeroes/Rickme/blob/gh-pages/Web%20Photos/Joan.png)
+* Joan Marín 
+  * Role: Programming
   * Github: [@X0KA](https://github.com/X0KA)
 
 ![Jaume Avinyó](https://raw.githubusercontent.com/UnluckyHeroes/Rickme/gh-pages/Web%20Photos/James.png)
 * Jaume Avinyó 
-  * Role: QA
+  * Role: QA Lead & Programmer
   * Github: [@Jaumeavinyo](https://github.com/Jaumeavinyo)
 
 ## Contact
@@ -69,9 +59,8 @@ GitHub Account: [Unlucky Heroes](https://github.com/UnluckyHeroes)
 
 ## Contributing
 1. Fork it!
-2. Create your feature branch: `git checkout -b my-newfeature`
-3. Commit your changes: `git commit -am 'Add some
-feature'`
+2. Create your feature branch: `git checkout -b my-newfeature` (also you can directly do it in the web)
+3. Commit your changes: `git commit -am 'Add some feature'
 4. Push to the branch: `git push origin my-new-feature`
 5. Submit a pull request and we might look into it. :D
 
