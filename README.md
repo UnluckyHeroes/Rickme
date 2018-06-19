@@ -7,8 +7,6 @@ Soon you will see the full gameplay on our [website](https://goo.gl/iCsdAr) or c
 
 **Current Game Version:** v0.0
 
-## Updates From Last Version
-
 ## The Unlucky Heroes Team
 ![Lucho Suaya](https://raw.githubusercontent.com/UnluckyHeroes/Rickme/gh-pages/Web%20Photos/Lucho.png)
 * Lucho Suaya
@@ -49,6 +47,8 @@ Soon you will see the full gameplay on our [website](https://goo.gl/iCsdAr) or c
 * Jaume Avinyó 
   * **Role:** QA Lead & Programmer
   * **Github:** [@Jaumeavinyo](https://github.com/Jaumeavinyo)
+
+## Updates From Last Version
 
 ## Contact
 Website: https://goo.gl/iCsdAr
