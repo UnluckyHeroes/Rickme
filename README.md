@@ -1,6 +1,6 @@
 # UNLUCKY HEROES
 
-Welcome to the Unlucky Heroes page! We are a team formed by eight students of the Degree in [VideoGames Design and Development](https://www.citm.upc.edu/cat/estudis/graus-videojocs/) from [CITM](https://www.citm.upc.edu/), at [Polithecnic University of Catalonia](http://www.upc.edu/ca).
+Welcome to the Unlucky Heroes page! We are a team formed by eight students of the Degree in [Videogames Design and Development](https://www.citm.upc.edu/cat/estudis/graus-videojocs/) from [CITM](https://www.citm.upc.edu/), at [Polytechnic University of Catalonia](http://www.upc.edu/ca).
 
       //Foto de grupo
       
