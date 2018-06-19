@@ -9,13 +9,11 @@
 
 ModuleMixer::ModuleMixer() : Module() {
 
-	for (int i = 0; i < MAX_MUSIC; ++i) {
+	for (int i = 0; i < MAX_MUSIC; ++i)
 		soundtrack[i] = nullptr;
-	}
 
-	for (int i = 0; i < MAX_FX; ++i) {
+	for (int i = 0; i < MAX_FX; ++i)
 		fx[i] = nullptr;
-	}
 }
 
 ModuleMixer::~ModuleMixer() {}
@@ -27,11 +25,11 @@ bool ModuleMixer::Init()
 
 	if (SDL_Init(SDL_INIT_AUDIO) != 0)
 	{
-
 		LOG("Broken: %s \n", SDL_GetError());
 		ret = false;
 		SDL_ClearError();
 	}
+
 	// Initialize Audio
 	Mix_OpenAudio(44100, MIX_DEFAULT_FORMAT, 2, 1024);
 
@@ -44,14 +42,16 @@ bool ModuleMixer::CleanUp()
 	LOG("CleanUp Module Mixer. Cleaning music and Sound effects");
 
 	for (int i = 0; i < MAX_MUSIC; ++i) {
-		if (soundtrack[i] != nullptr) {
+		if (soundtrack[i] != nullptr)
+		{
 			Mix_FreeMusic(soundtrack[i]);
 			soundtrack[i] = nullptr;
 		}
 	}
 
 	for (int i = 0; i < MAX_FX; ++i) {
-		if (fx[i] != nullptr) {
+		if (fx[i] != nullptr)
+		{
 			Mix_FreeChunk(fx[i]);
 			fx[i] = nullptr;
 		}
@@ -65,7 +65,8 @@ bool ModuleMixer::CleanUp()
 
 update_status ModuleMixer::Update()
 {
-	if (!musicRunning) {
+	if (!musicRunning)
+	{
 		Mix_PlayMusic(soundtrack[0], -1);
 		musicRunning = true;
 	}
@@ -105,8 +106,6 @@ bool ModuleMixer::UnloadMusic(Mix_Music * music)
 				break;
 			}
 		}
-
-
 	}
 
 	return ret;
@@ -138,14 +137,12 @@ bool ModuleMixer::UnloadFx(Mix_Chunk * soundfx)
 		{
 			if (fx[i] == soundfx)
 			{
-
 				Mix_FreeChunk(soundfx);
 				fx[i] = nullptr;
 				ret = true;
 				break;
 			}
 		}
-
 	}
 
 	return ret;
