@@ -31,6 +31,15 @@
     <Filter Include="GameModules\ModulesScreens">
       <UniqueIdentifier>{c7e8cb40-5415-4a4b-b5f4-cd3d2f464e86}</UniqueIdentifier>
     </Filter>
+    <Filter Include="GameCore\CoreModules\Controllers">
+      <UniqueIdentifier>{89b2960b-c05b-4ce5-b8e5-3806c97b3c21}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameCore\CoreModules\Screens">
+      <UniqueIdentifier>{4582aec8-2a88-46b2-87c9-4f620aebf927}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameCore\CoreModules\Physics">
+      <UniqueIdentifier>{394a5ef5-4317-4ef8-9824-5ab66c8887be}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Animation.h">
@@ -51,24 +60,6 @@
     <ClInclude Include="MemLeaks.h">
       <Filter>GameCore\CoreFiles</Filter>
     </ClInclude>
-    <ClInclude Include="ModuleCollision.h">
-      <Filter>GameCore\CoreModules</Filter>
-    </ClInclude>
-    <ClInclude Include="ModuleFadeToBlack.h">
-      <Filter>GameCore\CoreModules</Filter>
-    </ClInclude>
-    <ClInclude Include="ModuleFont.h">
-      <Filter>GameCore\CoreModules</Filter>
-    </ClInclude>
-    <ClInclude Include="ModuleInput.h">
-      <Filter>GameCore\CoreModules</Filter>
-    </ClInclude>
-    <ClInclude Include="ModuleTextures.h">
-      <Filter>GameCore\CoreModules</Filter>
-    </ClInclude>
-    <ClInclude Include="ModuleUserInterface.h">
-      <Filter>GameCore\CoreModules</Filter>
-    </ClInclude>
     <ClInclude Include="ModuleEnemies.h">
       <Filter>GameModules\ModulesEnemies\Core</Filter>
     </ClInclude>
@@ -78,19 +69,7 @@
     <ClInclude Include="EnemyExample.h">
       <Filter>GameModules\ModulesEnemies\Stage1</Filter>
     </ClInclude>
-    <ClInclude Include="ModuleParticles.h">
-      <Filter>GameCore\CoreModules</Filter>
-    </ClInclude>
     <ClInclude Include="Module.h">
-      <Filter>GameCore\CoreModules</Filter>
-    </ClInclude>
-    <ClInclude Include="ModuleRender.h">
-      <Filter>GameCore\CoreModules</Filter>
-    </ClInclude>
-    <ClInclude Include="ModuleWindow.h">
-      <Filter>GameCore\CoreModules</Filter>
-    </ClInclude>
-    <ClInclude Include="ModuleMixer.h">
       <Filter>GameCore\CoreModules</Filter>
     </ClInclude>
     <ClInclude Include="ModulePlayer1.h">
@@ -100,7 +79,37 @@
       <Filter>GameModules\ModulesPlayers</Filter>
     </ClInclude>
     <ClInclude Include="ModuleAudio.h">
-      <Filter>GameCore\CoreModules</Filter>
+      <Filter>GameCore\CoreModules\Controllers</Filter>
+    </ClInclude>
+    <ClInclude Include="ModuleInput.h">
+      <Filter>GameCore\CoreModules\Controllers</Filter>
+    </ClInclude>
+    <ClInclude Include="ModuleMixer.h">
+      <Filter>GameCore\CoreModules\Controllers</Filter>
+    </ClInclude>
+    <ClInclude Include="ModuleWindow.h">
+      <Filter>GameCore\CoreModules\Screens</Filter>
+    </ClInclude>
+    <ClInclude Include="ModuleTextures.h">
+      <Filter>GameCore\CoreModules\Screens</Filter>
+    </ClInclude>
+    <ClInclude Include="ModuleRender.h">
+      <Filter>GameCore\CoreModules\Screens</Filter>
+    </ClInclude>
+    <ClInclude Include="ModuleFadeToBlack.h">
+      <Filter>GameCore\CoreModules\Screens</Filter>
+    </ClInclude>
+    <ClInclude Include="ModuleCollision.h">
+      <Filter>GameCore\CoreModules\Physics</Filter>
+    </ClInclude>
+    <ClInclude Include="ModuleParticles.h">
+      <Filter>GameCore\CoreModules\Physics</Filter>
+    </ClInclude>
+    <ClInclude Include="CommentsOnUI.h">
+      <Filter>GameCore\CoreModules\Controllers</Filter>
+    </ClInclude>
+    <ClInclude Include="ModuleUI.h">
+      <Filter>GameCore\CoreModules\Controllers</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -113,24 +122,6 @@
     <ClCompile Include="Main.cpp">
       <Filter>GameCore\CoreFiles</Filter>
     </ClCompile>
-    <ClCompile Include="ModuleCollision.cpp">
-      <Filter>GameCore\CoreModules</Filter>
-    </ClCompile>
-    <ClCompile Include="ModuleFadeToBlack.cpp">
-      <Filter>GameCore\CoreModules</Filter>
-    </ClCompile>
-    <ClCompile Include="ModuleFont.cpp">
-      <Filter>GameCore\CoreModules</Filter>
-    </ClCompile>
-    <ClCompile Include="ModuleInput.cpp">
-      <Filter>GameCore\CoreModules</Filter>
-    </ClCompile>
-    <ClCompile Include="ModuleTextures.cpp">
-      <Filter>GameCore\CoreModules</Filter>
-    </ClCompile>
-    <ClCompile Include="ModuleUserInterface.cpp">
-      <Filter>GameCore\CoreModules</Filter>
-    </ClCompile>
     <ClCompile Include="ModuleEnemies.cpp">
       <Filter>GameModules\ModulesEnemies\Core</Filter>
     </ClCompile>
@@ -140,26 +131,41 @@
     <ClCompile Include="EnemyExample.cpp">
       <Filter>GameModules\ModulesEnemies\Stage1</Filter>
     </ClCompile>
-    <ClCompile Include="ModuleParticles.cpp">
-      <Filter>GameCore\CoreModules</Filter>
-    </ClCompile>
-    <ClCompile Include="ModuleRender.cpp">
-      <Filter>GameCore\CoreModules</Filter>
-    </ClCompile>
-    <ClCompile Include="ModuleWindow.cpp">
-      <Filter>GameCore\CoreModules</Filter>
-    </ClCompile>
-    <ClCompile Include="ModuleAudio.cpp">
-      <Filter>GameCore\CoreModules</Filter>
-    </ClCompile>
-    <ClCompile Include="ModuleMixer.cpp">
-      <Filter>GameCore\CoreModules</Filter>
-    </ClCompile>
     <ClCompile Include="ModulePlayer1.cpp">
       <Filter>GameModules\ModulesPlayers</Filter>
     </ClCompile>
     <ClCompile Include="ModulePlayer.cpp">
       <Filter>GameModules\ModulesPlayers</Filter>
+    </ClCompile>
+    <ClCompile Include="ModuleAudio.cpp">
+      <Filter>GameCore\CoreModules\Controllers</Filter>
+    </ClCompile>
+    <ClCompile Include="ModuleInput.cpp">
+      <Filter>GameCore\CoreModules\Controllers</Filter>
+    </ClCompile>
+    <ClCompile Include="ModuleMixer.cpp">
+      <Filter>GameCore\CoreModules\Controllers</Filter>
+    </ClCompile>
+    <ClCompile Include="ModuleWindow.cpp">
+      <Filter>GameCore\CoreModules\Screens</Filter>
+    </ClCompile>
+    <ClCompile Include="ModuleTextures.cpp">
+      <Filter>GameCore\CoreModules\Screens</Filter>
+    </ClCompile>
+    <ClCompile Include="ModuleRender.cpp">
+      <Filter>GameCore\CoreModules\Screens</Filter>
+    </ClCompile>
+    <ClCompile Include="ModuleFadeToBlack.cpp">
+      <Filter>GameCore\CoreModules\Screens</Filter>
+    </ClCompile>
+    <ClCompile Include="ModuleCollision.cpp">
+      <Filter>GameCore\CoreModules\Physics</Filter>
+    </ClCompile>
+    <ClCompile Include="ModuleParticles.cpp">
+      <Filter>GameCore\CoreModules\Physics</Filter>
+    </ClCompile>
+    <ClCompile Include="ModuleUI.cpp">
+      <Filter>GameCore\CoreModules\Controllers</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
