@@ -53,7 +53,7 @@ Soon you will see the full gameplay on our [website](https://goo.gl/iCsdAr) or c
 ## Contact
 Website: https://goo.gl/iCsdAr
 
-luchosuaya99@gmail.com
+Mail: luchosuaya99@gmail.com
 
 GitHub Account: [Unlucky Heroes](https://github.com/UnluckyHeroes)
 
@@ -61,7 +61,7 @@ GitHub Account: [Unlucky Heroes](https://github.com/UnluckyHeroes)
 1. Fork it!
 2. Create your feature branch: `git checkout -b my-newfeature` (also you can directly do it in the web)
 3. Commit your changes: `git commit -am 'Add some feature'
-4. Push to the branch: `git push origin my-new-feature`
+4. Push to the branch: `git push origin my-new-feature'
 5. Submit a pull request and we might look into it. :D
 
 ## License & Copyright 
