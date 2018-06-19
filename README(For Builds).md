@@ -1,15 +1,18 @@
-UNLUCKY HEROES
-\-------------------- RICKME PROJECT --------------------/
+RICKME BY UNLUCKY HEROES
+
+\---------------- RICKME PROJECT ----------------/
 This is a personal project made by Unlucky Heroes team from CITM students of the olitechical University of Catalonia in Barcelona, in which we create our own game from scratch using C++.
 
-RICKME is a beat â€˜em up game in which the videogames developer Rick Pillosu has to get on time to the E3 presentation with a stable build. In order to do it, he has to go through the way cleaning the build from bugs and other problems and has to pick and update the readme.md document, which works as a virtual coin to upgrade Rickâ€™s skills.
+RICKME is a beat 'em up game in which the videogames developer Rick Pillosu has to get on time to the E3 presentation with a stable build. In order to do it, he has to go through the way cleaning the build from bugs and other problems and has to pick and update the readme.md document, which works as a virtual coin to upgrade Rick's skills.
 
 Soon you will see the full gameplay on our website (https://goo.gl/iCsdAr).
 
 Current Game Version: v0.0
 
-\-------------------- INSTALLATION --------------------/
-No previous installation is required to play the game, just download and execute the .exe file *Rickme* from the latest release.
+
+\----------------- INSTALLATION -----------------/
+No previous installation is required to play the game, just download the latest build, decompress it and execute the .exe file *Rickme*.
+
 
 \-------------------- USAGE --------------------/
 
@@ -17,25 +20,27 @@ No previous installation is required to play the game, just download and execute
 
 \-------------------- Player Controls --------------------/
 
-\-------------------- Debug Mode --------------------/
+\---------------------- Debug Mode ----------------------/
 
-\-------------------- UPDATES FROM LAST VERSION --------------------/
 
-\-------------------- TEAM MEMBERS AND GITHUB ACCOUNTS --------------------/
+\------------------- UPDATES ------------------/
 
-Roger LeÃ³n (@rleonborras)
+\--------------- TEAM MEMBERS ---------------/
 
-Luciano Suaya (@lucho1)
+Roger León (@rleonborras)
+
+Lucho Suaya (@lucho1)
 
 Carles Homs(@ch0m5)
 
-AndrÃ©s Saladrigas(@TheArzhel)
+Andrés Saladrigas(@TheArzhel)
 
-DÃ­dac Romero (@DidacRomero)
+Dídac Romero (@DidacRomero)
 
-Jaume AvinyÃ³ (@Jaumeavinyo)
+Jaume Avinyó (@Jaumeavinyo)
 
-\-------------------- CONTACT --------------------/
+
+\----------------- CONTACT -----------------/
 
 Web Page: https://goo.gl/iCsdAr
 
