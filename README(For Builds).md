@@ -1,7 +1,7 @@
 RICKME BY UNLUCKY HEROES
 
 \---------------- RICKME PROJECT ----------------/
-This is a personal project made by Unlucky Heroes team from CITM students of the Politechical University of Catalonia in Barcelona, in which we create our own game from scratch using C++.
+This is a personal project made by Unlucky Heroes team from CITM students of the Polytechnic University of Catalonia in Barcelona, in which we create our own game from scratch using C++.
 
 RICKME is a beat 'em up game in which the videogames developer Rick Pillosu has to get on time to the E3 presentation with a stable build. In order to do it, he has to go through the way cleaning the build from bugs and other problems and has to pick and update the readme.md document, which works as a virtual coin to upgrade Rick's skills.
 
