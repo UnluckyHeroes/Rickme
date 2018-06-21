@@ -1,5 +1,5 @@
-#ifndef __ModulePlayer_H__
-#define __ModulePlayer_H__	//@CarlesHoms
+#ifndef __PLAYER_H__
+#define __PLAYER_H__	//@CarlesHoms
 
 #include "Module.h"
 #include "Animation.h"
@@ -11,11 +11,11 @@
 struct SDL_Texture;
 struct Collider;
 
-class ModulePlayer : public Module
+class Player : public Module
 {
 public:
-	ModulePlayer();
-	~ModulePlayer();
+	Player();
+	~Player();
 
 	bool Start();
 	update_status Update();
@@ -45,4 +45,4 @@ public:
 	//bool godMode;
 };
 
-#endif
+#endif	// __PLAYER_H__
