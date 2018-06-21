@@ -27,11 +27,6 @@ struct Font {
 	uint rows, len, char_w, char_h, row_chars;
 };
 
-//struct rank {
-//
-//	char name[3];
-//	int score;
-//};
 
 class ModuleUI : public Module
 {
@@ -41,26 +36,18 @@ public:
 	ModuleUI();
 	~ModuleUI();
 
+	bool Start();
+	update_status Update();
+	bool CleanUp();
+
 public: 
 
 	//Functions
 	int LoadFont(const char* texture_path, const char *characters, uint rows = 1);
-	void UnLoadFont(int font_id);
+	void UnloadFont(int font_id);
 	void BlitText(int x, int y, int bmp_font_id, const char *text) const;
 
 public: 
-
-	//Standards
-
-	//Scores & UI
-	bool God;
-	bool Spawned;
-	bool TimeCounter;
-
-	uint AppearTime;
-	uint CurrentTime;
-
-	SDL_Texture* UI_Main_Menu = nullptr;
 
 	//Font ID
 	int Font = -1;
@@ -73,49 +60,60 @@ public:
 	uint Ranking_Score;
 
 	//Readme Parameter
-	uint ReadmeCoins;
+	float ReadmeCoins;
 	char Readme_Text[10];
 
 	//Stability
 	char Stability_Text[10];
 	uint Stability;
 
-public:
-
-	//RANKING
-	//FILE* Ranking;
-	//uint a = 0;
-	//struct rank ranking[9];
-
-	////To put the name in the ranking
-	//int counter;
-	//char name1;
-	//char name2;
-	//char name3;
-	//bool cpressed = false;
-	//bool c2pressed = false;
-	//bool c3pressed = false;
-	//bool ccompleted = false;
-	//char NewName[4] = "RCK";
-	//char New[4];
-
-	//uint counterRanking;
-
-	//char* abecedary = "ABCDEFGHIJKLMN0PQRSTUVWXYZ";
-	//char* abecedary2 = "ABCDEFGHIJKLMN0PQRSTUVWXYZ";
-	//char* abecedary3 = "ABCDEFGHIJKLMN0PQRSTUVWXYZ";
-	//int selector = 0;
-	//int selector2 = 0;
-	//int selector3 = 0;
-
-	////Ranking Functions
-	//void BlitRanking(struct rank array[9]);
-	//void WriteName();
-	//void ChangeRanking(FILE *pFile, char *path, int Score);
-
 private:
 
-	Font fonts[MAX_FONTS];
+	Font fonts[MAX_FONTS]; //WTF is this error?
 };
 
 #endif
+
+
+
+
+
+//----------------- FOR THE RANKING -----------------\\
+
+//struct rank {
+//
+//	char name[3];
+//	int score;
+//};
+
+
+
+/*FILE* Ranking;
+uint a = 0;
+struct rank ranking[9];
+
+//To put the name in the ranking
+int counter;
+char name1;
+char name2;
+char name3;
+bool cpressed = false;
+bool c2pressed = false;
+bool c3pressed = false;
+bool ccompleted = false;
+char NewName[4] = "RCK";
+char New[4];
+
+uint counterRanking;
+
+char* abecedary = "ABCDEFGHIJKLMN0PQRSTUVWXYZ";
+char* abecedary2 = "ABCDEFGHIJKLMN0PQRSTUVWXYZ";
+char* abecedary3 = "ABCDEFGHIJKLMN0PQRSTUVWXYZ";
+int selector = 0;
+int selector2 = 0;
+int selector3 = 0;
+
+//Ranking Functions
+void BlitRanking(struct rank array[9]);
+void WriteName();
+void ChangeRanking(FILE *pFile, char *path, int Score); */

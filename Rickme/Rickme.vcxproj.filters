@@ -105,9 +105,6 @@
     <ClInclude Include="ModuleParticles.h">
       <Filter>GameCore\CoreModules\Physics</Filter>
     </ClInclude>
-    <ClInclude Include="CommentsOnUI.h">
-      <Filter>GameCore\CoreModules\Controllers</Filter>
-    </ClInclude>
     <ClInclude Include="ModuleUI.h">
       <Filter>GameCore\CoreModules\Controllers</Filter>
     </ClInclude>
