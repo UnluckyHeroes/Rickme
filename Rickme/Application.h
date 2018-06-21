@@ -11,7 +11,7 @@ class ModuleInput;
 class ModuleTextures;
 class ModuleRender;
 class ModuleMixer;
-class Module_Audio;
+class ModuleAudio;
 class ModuleFadeToBlack;
 class ModulePlayer;
 class ModulePlayer1;
@@ -33,7 +33,7 @@ public:
 	ModuleInput* input = nullptr;
 	ModuleTextures* textures = nullptr;
 	ModuleMixer* mixer = nullptr;
-	Module_Audio* audio = nullptr;
+	ModuleAudio* audio = nullptr;
 	ModuleFadeToBlack* fade = nullptr;
 	ModulePlayer1* player1 = nullptr;
 	ModuleParticles* particles = nullptr;
