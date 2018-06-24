@@ -1,165 +1,171 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="GameCore">
-      <UniqueIdentifier>{718f3e74-2ffb-4bdb-9d03-9fa733e4b692}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="GameCore\CoreFiles">
-      <UniqueIdentifier>{ad5e3446-1ed8-482b-a753-4966788b61c1}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="GameCore\CoreUtilities">
-      <UniqueIdentifier>{795c841c-8297-4501-8bfb-20035af0d114}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="GameCore\CoreModules">
-      <UniqueIdentifier>{43652cfc-0c70-4be3-839e-84d8ac20b926}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="GameModules">
+    <Filter Include="Game">
       <UniqueIdentifier>{aa859a00-c642-40cc-8bef-879bf1c38bb5}</UniqueIdentifier>
     </Filter>
-    <Filter Include="GameModules\ModulesEnemies">
+    <Filter Include="Core">
+      <UniqueIdentifier>{718f3e74-2ffb-4bdb-9d03-9fa733e4b692}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Core\CoreFiles">
+      <UniqueIdentifier>{ad5e3446-1ed8-482b-a753-4966788b61c1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Core\CoreUtilities">
+      <UniqueIdentifier>{795c841c-8297-4501-8bfb-20035af0d114}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Core\CoreModules">
+      <UniqueIdentifier>{43652cfc-0c70-4be3-839e-84d8ac20b926}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\Base">
+      <UniqueIdentifier>{c0e119b2-70fe-4b58-a1f4-0fef70218fbb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\Enemies">
       <UniqueIdentifier>{39b0188c-9d18-4386-ba05-5f9fecbe69b2}</UniqueIdentifier>
     </Filter>
-    <Filter Include="GameModules\ModulesEnemies\Stage1">
+    <Filter Include="Game\Enemies\Stage1">
       <UniqueIdentifier>{69046ac1-1236-4a48-a0c9-0312de0c21f1}</UniqueIdentifier>
     </Filter>
-    <Filter Include="GameModules\ModulesEnemies\Core">
+    <Filter Include="Game\Enemies\Core">
       <UniqueIdentifier>{82092181-9c36-4c10-9ed4-df1f5edc3dab}</UniqueIdentifier>
     </Filter>
-    <Filter Include="GameModules\ModulesPlayers">
+    <Filter Include="Game\Players">
       <UniqueIdentifier>{af7b8ef3-637d-4385-aa6b-b1f568e39bab}</UniqueIdentifier>
     </Filter>
-    <Filter Include="GameModules\ModulesScreens">
+    <Filter Include="Game\Screens">
       <UniqueIdentifier>{c7e8cb40-5415-4a4b-b5f4-cd3d2f464e86}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\Players\Core">
+      <UniqueIdentifier>{fcd9798c-21c3-4571-aca5-169dc70f5b96}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Animation.h">
-      <Filter>GameCore\CoreUtilities</Filter>
+      <Filter>Core\CoreUtilities</Filter>
     </ClInclude>
     <ClInclude Include="Path.h">
-      <Filter>GameCore\CoreUtilities</Filter>
+      <Filter>Core\CoreUtilities</Filter>
     </ClInclude>
     <ClInclude Include="p2Point.h">
-      <Filter>GameCore\CoreUtilities</Filter>
+      <Filter>Core\CoreUtilities</Filter>
     </ClInclude>
     <ClInclude Include="Application.h">
-      <Filter>GameCore\CoreFiles</Filter>
+      <Filter>Core\CoreFiles</Filter>
     </ClInclude>
     <ClInclude Include="Globals.h">
-      <Filter>GameCore\CoreFiles</Filter>
+      <Filter>Core\CoreFiles</Filter>
     </ClInclude>
     <ClInclude Include="MemLeaks.h">
-      <Filter>GameCore\CoreFiles</Filter>
+      <Filter>Core\CoreFiles</Filter>
     </ClInclude>
     <ClInclude Include="ModuleCollision.h">
-      <Filter>GameCore\CoreModules</Filter>
+      <Filter>Core\CoreModules</Filter>
     </ClInclude>
     <ClInclude Include="ModuleFadeToBlack.h">
-      <Filter>GameCore\CoreModules</Filter>
-    </ClInclude>
-    <ClInclude Include="ModuleFont.h">
-      <Filter>GameCore\CoreModules</Filter>
+      <Filter>Core\CoreModules</Filter>
     </ClInclude>
     <ClInclude Include="ModuleInput.h">
-      <Filter>GameCore\CoreModules</Filter>
+      <Filter>Core\CoreModules</Filter>
     </ClInclude>
     <ClInclude Include="ModuleTextures.h">
-      <Filter>GameCore\CoreModules</Filter>
-    </ClInclude>
-    <ClInclude Include="ModuleUserInterface.h">
-      <Filter>GameCore\CoreModules</Filter>
+      <Filter>Core\CoreModules</Filter>
     </ClInclude>
     <ClInclude Include="ModuleEnemies.h">
-      <Filter>GameModules\ModulesEnemies\Core</Filter>
+      <Filter>Game\Enemies\Core</Filter>
     </ClInclude>
     <ClInclude Include="Enemy.h">
-      <Filter>GameModules\ModulesEnemies\Core</Filter>
+      <Filter>Game\Enemies\Core</Filter>
     </ClInclude>
     <ClInclude Include="EnemyExample.h">
-      <Filter>GameModules\ModulesEnemies\Stage1</Filter>
-    </ClInclude>
-    <ClInclude Include="ModuleParticles.h">
-      <Filter>GameCore\CoreModules</Filter>
+      <Filter>Game\Enemies\Stage1</Filter>
     </ClInclude>
     <ClInclude Include="Module.h">
-      <Filter>GameCore\CoreModules</Filter>
+      <Filter>Core\CoreModules</Filter>
     </ClInclude>
     <ClInclude Include="ModuleRender.h">
-      <Filter>GameCore\CoreModules</Filter>
+      <Filter>Core\CoreModules</Filter>
     </ClInclude>
     <ClInclude Include="ModuleWindow.h">
-      <Filter>GameCore\CoreModules</Filter>
+      <Filter>Core\CoreModules</Filter>
     </ClInclude>
     <ClInclude Include="ModuleMixer.h">
-      <Filter>GameCore\CoreModules</Filter>
+      <Filter>Core\CoreModules</Filter>
     </ClInclude>
     <ClInclude Include="ModulePlayer1.h">
-      <Filter>GameModules\ModulesPlayers</Filter>
+      <Filter>Game\Players</Filter>
     </ClInclude>
-    <ClInclude Include="ModulePlayer.h">
-      <Filter>GameModules\ModulesPlayers</Filter>
+    <ClInclude Include="ModuleUserInterface.h">
+      <Filter>Game\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="ModuleParticles.h">
+      <Filter>Game\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="ModuleFont.h">
+      <Filter>Game\Base</Filter>
     </ClInclude>
     <ClInclude Include="ModuleAudio.h">
-      <Filter>GameCore\CoreModules</Filter>
+      <Filter>Game\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="Player.h">
+      <Filter>Game\Players\Core</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Application.cpp">
-      <Filter>GameCore\CoreFiles</Filter>
+      <Filter>Core\CoreFiles</Filter>
     </ClCompile>
     <ClCompile Include="Globals.cpp">
-      <Filter>GameCore\CoreFiles</Filter>
-    </ClCompile>
-    <ClCompile Include="Main.cpp">
-      <Filter>GameCore\CoreFiles</Filter>
+      <Filter>Core\CoreFiles</Filter>
     </ClCompile>
     <ClCompile Include="ModuleCollision.cpp">
-      <Filter>GameCore\CoreModules</Filter>
+      <Filter>Core\CoreModules</Filter>
     </ClCompile>
     <ClCompile Include="ModuleFadeToBlack.cpp">
-      <Filter>GameCore\CoreModules</Filter>
-    </ClCompile>
-    <ClCompile Include="ModuleFont.cpp">
-      <Filter>GameCore\CoreModules</Filter>
+      <Filter>Core\CoreModules</Filter>
     </ClCompile>
     <ClCompile Include="ModuleInput.cpp">
-      <Filter>GameCore\CoreModules</Filter>
+      <Filter>Core\CoreModules</Filter>
     </ClCompile>
     <ClCompile Include="ModuleTextures.cpp">
-      <Filter>GameCore\CoreModules</Filter>
-    </ClCompile>
-    <ClCompile Include="ModuleUserInterface.cpp">
-      <Filter>GameCore\CoreModules</Filter>
+      <Filter>Core\CoreModules</Filter>
     </ClCompile>
     <ClCompile Include="ModuleEnemies.cpp">
-      <Filter>GameModules\ModulesEnemies\Core</Filter>
+      <Filter>Game\Enemies\Core</Filter>
     </ClCompile>
     <ClCompile Include="Enemy.cpp">
-      <Filter>GameModules\ModulesEnemies\Core</Filter>
+      <Filter>Game\Enemies\Core</Filter>
     </ClCompile>
     <ClCompile Include="EnemyExample.cpp">
-      <Filter>GameModules\ModulesEnemies\Stage1</Filter>
-    </ClCompile>
-    <ClCompile Include="ModuleParticles.cpp">
-      <Filter>GameCore\CoreModules</Filter>
+      <Filter>Game\Enemies\Stage1</Filter>
     </ClCompile>
     <ClCompile Include="ModuleRender.cpp">
-      <Filter>GameCore\CoreModules</Filter>
+      <Filter>Core\CoreModules</Filter>
     </ClCompile>
     <ClCompile Include="ModuleWindow.cpp">
-      <Filter>GameCore\CoreModules</Filter>
-    </ClCompile>
-    <ClCompile Include="ModuleAudio.cpp">
-      <Filter>GameCore\CoreModules</Filter>
+      <Filter>Core\CoreModules</Filter>
     </ClCompile>
     <ClCompile Include="ModuleMixer.cpp">
-      <Filter>GameCore\CoreModules</Filter>
+      <Filter>Core\CoreModules</Filter>
     </ClCompile>
     <ClCompile Include="ModulePlayer1.cpp">
-      <Filter>GameModules\ModulesPlayers</Filter>
+      <Filter>Game\Players</Filter>
     </ClCompile>
-    <ClCompile Include="ModulePlayer.cpp">
-      <Filter>GameModules\ModulesPlayers</Filter>
+    <ClCompile Include="ModuleUserInterface.cpp">
+      <Filter>Game\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="ModuleParticles.cpp">
+      <Filter>Game\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="ModuleFont.cpp">
+      <Filter>Game\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="ModuleAudio.cpp">
+      <Filter>Game\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>Core\CoreFiles</Filter>
+    </ClCompile>
+    <ClCompile Include="Player.cpp">
+      <Filter>Game\Players\Core</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
