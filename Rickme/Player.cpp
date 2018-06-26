@@ -1,23 +1,17 @@
 #include "Globals.h"
 #include "Application.h"
+#include "Player.h"
 #include "ModuleTextures.h"
 #include "ModuleInput.h"
 #include "ModuleRender.h"
 #include "ModuleCollision.h"
-#include "ModulePlayer1.h"
-#include "ModulePlayer2.h"
 #include "ModuleParticles.h"
 #include "ModuleMixer.h"
 #include "ModuleFadeToBlack.h"
-#include "ModuleMainMenu.h"
-#include "ModuleHiScore.h"
-#include "ModuleStage1.h"
-#include "ModuleStage2.h"
 #include "ModuleFont.h"
 #include "ModuleUserInterface.h"
-#include "ModuleShieldsP1.h"
 
-ModulePlayer1::ModulePlayer1()	// @CarlesHoms @Andres
+Player::Player()	// @CarlesHoms @Andres
 {
 	graphics = nullptr;
 
@@ -187,11 +181,11 @@ ModulePlayer1::ModulePlayer1()	// @CarlesHoms @Andres
 	crash.loop = false;
 }
 
-ModulePlayer1::~ModulePlayer1()
+Player::~Player()
 {}
 
 // Load assets
-bool ModulePlayer1::Start()
+bool Player::Start()
 {
 	LOG("Loading player textures");
 	bool ret = true;
@@ -269,7 +263,7 @@ bool ModulePlayer1::Start()
 }
 
 // Update: draw background
-update_status ModulePlayer1::Update()	// Moves the ship and changes it's printed sprite depending on a counter.
+update_status Player::Update()	// Moves the ship and changes it's printed sprite depending on a counter.
 {
 	if (destroyed == false)
 	{
@@ -1494,7 +1488,7 @@ update_status ModulePlayer1::Update()	// Moves the ship and changes it's printed
 	return UPDATE_CONTINUE;
 }
 
-bool ModulePlayer1::CleanUp()
+bool Player::CleanUp()
 {
 	LOG("Unloading player 1");
 	App->textures->Unload(graphics);
@@ -1529,7 +1523,7 @@ bool ModulePlayer1::CleanUp()
 	return true;
 }
 
-void ModulePlayer1::OnCollision(Collider* c1, Collider* c2)
+void Player::OnCollision(Collider* c1, Collider* c2)
 {
 	if (c2->type != COLLIDER_POWERUP)
 	{
@@ -1577,7 +1571,7 @@ void ModulePlayer1::OnCollision(Collider* c1, Collider* c2)
 	}
 }
 
-void ModulePlayer1::checkBluePowerParticleLimit()
+void Player::checkBluePowerParticleLimit()
 {
 	switch (type)
 	{

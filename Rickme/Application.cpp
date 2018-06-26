@@ -8,10 +8,10 @@
 #include "ModuleParticles.h"
 #include "ModuleFont.h"
 #include "ModuleUserInterface.h"
-//#include "Module_Audio.h"
+#include "ModuleAudio.h"
 
 #include "ModulePlayer1.h"
-#include "ModuleMainMenu.h"
+//#include "ModuleMainMenu.h"
 #include "ModuleEnemies.h"
 
 Application::Application()
@@ -22,7 +22,7 @@ Application::Application()
 	modules[i++] = input = new ModuleInput();
 	modules[i++] = textures = new ModuleTextures();
 	modules[i++] = mixer = new ModuleMixer();
-	//modules[i++] = audio = new Module_Audio();
+	modules[i++] = audio = new ModuleAudio();
 	//modules[i++] = mainMenu = new ModuleMainMenu();
 	//modules[i++] = scoreboard = new ModuleScoreboard();
 	modules[i++] = particles = new ModuleParticles();
