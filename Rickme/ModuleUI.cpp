@@ -1,21 +1,46 @@
+#define _CRT_SECURE_NO_WARNINGS
+
+#include "ModuleUI.h"
 #include "Globals.h"
 #include "Application.h"
-#include "ModuleTextures.h"
-#include "ModuleRender.h"
-#include "ModuleFont.h"
 
-#include<string.h>
+#include <iostream>
+#include <string.h>
+#include <cstdio>
 
-// Constructor
-ModuleFont::ModuleFont() : Module()
-{}
+ModuleUI::ModuleUI()
+{
+}
 
-// Destructor
-ModuleFont::~ModuleFont()
-{}
 
-// Load new texture from file path
-int ModuleFont::Load(const char* texture_path, const char* characters, uint rows)
+ModuleUI::~ModuleUI()
+{
+}
+
+bool ModuleUI::Start()
+{
+
+	P1Score = 0;
+	ReadmeCoins = 0.1;
+	Stability = 50;
+
+	font = ("PATH", "REPRESENTATION", 2); //Same error than in header
+
+	return true;
+}
+
+bool ModuleUI::CleanUp()
+{
+
+	UnloadFont(font);
+	return true;
+}
+
+update_status ModuleUI::Update()
+{
+}
+
+int ModuleUI::LoadFont(const char* texture_path, const char* characters, uint rows)
 {
 	int id = -1;
 
@@ -65,7 +90,8 @@ int ModuleFont::Load(const char* texture_path, const char* characters, uint rows
 	return id;
 }
 
-void ModuleFont::UnLoad(int font_id)
+
+void ModuleUI::UnloadFont(int font_id)
 {
 	if (font_id >= 0 && font_id < MAX_FONTS && fonts[font_id].graphic != nullptr)
 	{
@@ -75,8 +101,8 @@ void ModuleFont::UnLoad(int font_id)
 	}
 }
 
-// Render text using a bitmap font
-void ModuleFont::BlitText(int x, int y, int font_id, const char* text) const
+
+void ModuleUI::BlitText(int x, int y, int font_id, const char* text) const
 {
 	if (text == nullptr || font_id < 0 || font_id >= MAX_FONTS || fonts[font_id].graphic == nullptr)
 	{
@@ -93,7 +119,7 @@ void ModuleFont::BlitText(int x, int y, int font_id, const char* text) const
 
 	for (uint i = 0; i < len; ++i)
 	{
-		// TODO 2: Find the character in the table and its position in the texture, then Blit
+
 		int c = 0;
 		for (; c < fonts[font_id].len; ++c)
 		{
@@ -109,27 +135,4 @@ void ModuleFont::BlitText(int x, int y, int font_id, const char* text) const
 
 		App->render->Blit(font->graphic, x + (i*font->char_w), y, &rect, 1.0f, false);
 	}
-}
-
-
-void ModuleFont::scoreToText(char* string, uint score, uint size)
-{
-
-	/*uint mul = 10;
-	for (uint i = size - 1; i >= 0; --i,mul*=10)
-	{
-	*string[i] = (score % mul) + 48;
-	}
-	for (int i = 0; i < size; ++i)
-	{
-	if (*string[i] == 0 && *string[i]!= size-2)
-	{
-	*string[i] == ' ';
-	}
-	else
-	{
-	break;
-	}
-	}
-	*/
 }
