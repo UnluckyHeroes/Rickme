@@ -125,7 +125,7 @@
     <ClInclude Include="MemLeaks.h" />
     <ClInclude Include="Module.h" />
     <ClInclude Include="ModuleAudio.h" />
-    <ClInclude Include="ModulePlayer.h" />
+    <ClInclude Include="Player.h" />
     <ClInclude Include="ModuleCollision.h" />
     <ClInclude Include="ModuleEnemies.h" />
     <ClInclude Include="ModuleFadeToBlack.h" />
@@ -145,9 +145,9 @@
     <ClCompile Include="Enemy.cpp" />
     <ClCompile Include="EnemyExample.cpp" />
     <ClCompile Include="Globals.cpp" />
-    <ClCompile Include="Main.cpp" />
+    <ClCompile Include="main.cpp" />
     <ClCompile Include="ModuleAudio.cpp" />
-    <ClCompile Include="ModulePlayer.cpp" />
+    <ClCompile Include="Player.cpp" />
     <ClCompile Include="ModuleCollision.cpp" />
     <ClCompile Include="ModuleEnemies.cpp" />
     <ClCompile Include="ModuleFadeToBlack.cpp" />
