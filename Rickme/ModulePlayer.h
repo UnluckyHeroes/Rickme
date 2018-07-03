@@ -1,0 +1,58 @@
+#ifndef	__MODULEPLAYER_H__
+#define	__MODULEPLAYER_H__
+
+#include "Module.h"
+#include "Animation.h"
+#include "Globals.h"
+#include "p2Point.h"
+
+struct SDL_Texture;
+
+enum WEAPON {
+	PISTOL,
+	SHOTGUN,
+	RIFLE
+};
+
+//The modifier will add different effects to the weapon: damage, slow effect,etc.
+enum MODIFIER {
+	NAIL,
+	ELECRTICITY,
+	FIRE,
+	NONE
+};
+
+class ModulePlayer :public Module{
+public:
+
+	ModulePlayer();
+	~ModulePlayer();
+
+	bool Init();
+	update_status Update();
+	bool CleanUp();
+
+	void OnCollision();
+
+	void PickGun()const;
+	void PickMod()const;
+
+	char playerSpeed = 2;	//Speed at which the player moves
+	
+	iPoint playerPosition;		//Position of the player {x,y}
+	
+	WEAPON currentWeapon;		//Current weapon of the player
+	MODIFIER currentModifier;	//Current modifier of the weapon
+
+private:
+	
+	SDL_Texture *playerTexture = nullptr; //texture of the player sprites
+
+};
+
+
+
+
+
+#endif // 
+

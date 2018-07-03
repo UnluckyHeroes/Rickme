@@ -130,6 +130,9 @@
     <ClInclude Include="ModuleAudio.h">
       <Filter>Core\CoreModules</Filter>
     </ClInclude>
+    <ClInclude Include="ModulePlayer.h">
+      <Filter>Game\Players\Core</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Application.cpp">
@@ -197,6 +200,9 @@
     </ClCompile>
     <ClCompile Include="ModuleWindow.cpp">
       <Filter>Core\CoreModules</Filter>
+    </ClCompile>
+    <ClCompile Include="ModulePlayer.cpp">
+      <Filter>Game\Players\Core</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
