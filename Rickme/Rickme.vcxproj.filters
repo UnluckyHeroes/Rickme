@@ -93,20 +93,42 @@
     <ClInclude Include="ModulePlayer1.h">
       <Filter>Game\Players</Filter>
     </ClInclude>
-    <ClInclude Include="ModuleUserInterface.h">
-      <Filter>Game\Base</Filter>
-    </ClInclude>
     <ClInclude Include="ModuleParticles.h">
       <Filter>Game\Base</Filter>
     </ClInclude>
-    <ClInclude Include="ModuleFont.h">
-      <Filter>Game\Base</Filter>
+    <ClInclude Include="ModuleInput.h">
+      <Filter>GameCore\CoreModules\Controllers</Filter>
     </ClInclude>
-    <ClInclude Include="ModuleAudio.h">
+    <ClInclude Include="ModuleMixer.h">
+      <Filter>GameCore\CoreModules\Controllers</Filter>
+    </ClInclude>
+    <ClInclude Include="ModuleWindow.h">
+      <Filter>GameCore\CoreModules\Screens</Filter>
+    </ClInclude>
+    <ClInclude Include="ModuleTextures.h">
+      <Filter>GameCore\CoreModules\Screens</Filter>
+    </ClInclude>
+    <ClInclude Include="ModuleRender.h">
+      <Filter>GameCore\CoreModules\Screens</Filter>
+    </ClInclude>
+    <ClInclude Include="ModuleFadeToBlack.h">
+      <Filter>GameCore\CoreModules\Screens</Filter>
+    </ClInclude>
+    <ClInclude Include="ModuleCollision.h">
+      <Filter>GameCore\CoreModules\Physics</Filter>
+    </ClInclude>
+    <ClInclude Include="ModuleParticles.h">
+      <Filter>GameCore\CoreModules\Physics</Filter>
+    </ClInclude>
+    <ClInclude Include="ModuleUI.h">
+      <Filter>GameCore\CoreModules\Controllers</Filter>
       <Filter>Game\Base</Filter>
     </ClInclude>
     <ClInclude Include="Player.h">
       <Filter>Game\Players\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="ModuleAudio.h">
+      <Filter>Core\CoreModules</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -134,38 +156,47 @@
     <ClCompile Include="Enemy.cpp">
       <Filter>Game\Enemies\Core</Filter>
     </ClCompile>
+    <ClCompile Include="ModuleInput.cpp">
+      <Filter>GameCore\CoreModules\Controllers</Filter>
+    </ClCompile>
+    <ClCompile Include="ModuleTextures.cpp">
+      <Filter>GameCore\CoreModules\Screens</Filter>
+    </ClCompile>
+    <ClCompile Include="ModuleFadeToBlack.cpp">
+      <Filter>GameCore\CoreModules\Screens</Filter>
+    </ClCompile>
+    <ClCompile Include="ModuleCollision.cpp">
+      <Filter>GameCore\CoreModules\Physics</Filter>
+    </ClCompile>
     <ClCompile Include="EnemyExample.cpp">
       <Filter>Game\Enemies\Stage1</Filter>
+    </ClCompile>
+    <ClCompile Include="ModuleAudio.cpp">
+      <Filter>Core\CoreModules</Filter>
+    </ClCompile>
+    <ClCompile Include="ModuleParticles.cpp">
+      <Filter>Game\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="ModuleUI.cpp">
+      <Filter>Game\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>Core\CoreFiles</Filter>
+    </ClCompile>
+    <ClCompile Include="ModulePlayer1.cpp">
+      <Filter>Game\Players</Filter>
+    </ClCompile>
+    <ClCompile Include="Player.cpp">
+      <Filter>Game\Players\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="ModuleMixer.cpp">
+      <Filter>Core\CoreModules</Filter>
     </ClCompile>
     <ClCompile Include="ModuleRender.cpp">
       <Filter>Core\CoreModules</Filter>
     </ClCompile>
     <ClCompile Include="ModuleWindow.cpp">
       <Filter>Core\CoreModules</Filter>
-    </ClCompile>
-    <ClCompile Include="ModuleMixer.cpp">
-      <Filter>Core\CoreModules</Filter>
-    </ClCompile>
-    <ClCompile Include="ModulePlayer1.cpp">
-      <Filter>Game\Players</Filter>
-    </ClCompile>
-    <ClCompile Include="ModuleUserInterface.cpp">
-      <Filter>Game\Base</Filter>
-    </ClCompile>
-    <ClCompile Include="ModuleParticles.cpp">
-      <Filter>Game\Base</Filter>
-    </ClCompile>
-    <ClCompile Include="ModuleFont.cpp">
-      <Filter>Game\Base</Filter>
-    </ClCompile>
-    <ClCompile Include="ModuleAudio.cpp">
-      <Filter>Game\Base</Filter>
-    </ClCompile>
-    <ClCompile Include="main.cpp">
-      <Filter>Core\CoreFiles</Filter>
-    </ClCompile>
-    <ClCompile Include="Player.cpp">
-      <Filter>Game\Players\Core</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
