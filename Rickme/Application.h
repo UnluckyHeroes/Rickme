@@ -35,7 +35,7 @@ public:
 	ModuleMixer* mixer = nullptr;
 	ModuleAudio* audio = nullptr;
 	ModuleFadeToBlack* fade = nullptr;
-	ModulePlayer1* player1 = nullptr;
+	ModulePlayer* player1 = nullptr;
 	ModuleParticles* particles = nullptr;
 	ModuleMainMenu* mainMenu = nullptr;
 	ModuleScoreboard* scoreboard = nullptr;

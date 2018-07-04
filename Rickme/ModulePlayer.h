@@ -5,8 +5,16 @@
 #include "Animation.h"
 #include "Globals.h"
 #include "p2Point.h"
+#include "ModuleInput.h"
+#include "Application.h"
+
 
 struct SDL_Texture;
+
+enum PLAYER_NUMBER {
+	PLAYER_1,
+	PLAYER_2
+};
 
 enum WEAPON {
 	PISTOL,
@@ -25,7 +33,7 @@ enum MODIFIER {
 class ModulePlayer :public Module{
 public:
 
-	ModulePlayer();
+	ModulePlayer(PLAYER_NUMBER playerNumber_);
 	~ModulePlayer();
 
 	bool Init();
@@ -34,10 +42,14 @@ public:
 
 	void OnCollision();
 
-	void PickGun()const;
-	void PickMod()const;
+	void PickGun();
+	void PickMod();
+	void const Move();
+	void const Shoot();
 
-	char playerSpeed = 2;	//Speed at which the player moves
+	PLAYER_NUMBER playerNumber; //This variable will tell if it's player 1, or player 2, etc. and by this, it will load different animations, textures,etc. All in the constructor
+
+	uint playerSpeed = 2;		//Speed at which the player moves
 	
 	iPoint playerPosition;		//Position of the player {x,y}
 	
@@ -46,8 +58,15 @@ public:
 
 private:
 	
-	SDL_Texture *playerTexture = nullptr; //texture of the player sprites
+	//These variables will define the controls of the player
+	
+	SDL_Scancode upwardsKey;	//Go upwards
+	SDL_Scancode downwardsKey;	//Go downwards
+	SDL_Scancode leftKey;		//Go left
+	SDL_Scancode rightKey;		//Go right
+	SDL_Scancode shootKey;		//Shoot
 
+	SDL_Texture *playerTexture = nullptr; //texture of the player sprites
 };
 
 
