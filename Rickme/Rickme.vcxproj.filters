@@ -37,6 +37,9 @@
     <Filter Include="Game\Players\Core">
       <UniqueIdentifier>{fcd9798c-21c3-4571-aca5-169dc70f5b96}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Game\Screens\Core">
+      <UniqueIdentifier>{8faae9c7-9c6d-49b2-824e-a2a4ecab8895}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Animation.h">
@@ -130,6 +133,18 @@
     <ClInclude Include="ModuleAudio.h">
       <Filter>Core\CoreModules</Filter>
     </ClInclude>
+    <ClInclude Include="Module_Main_Menu.h">
+      <Filter>Game\Screens</Filter>
+    </ClInclude>
+    <ClInclude Include="Module_Map_Generation.h">
+      <Filter>Game\Screens</Filter>
+    </ClInclude>
+    <ClInclude Include="Room.h">
+      <Filter>Game\Screens\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Dungeon.h">
+      <Filter>Game\Screens\Core</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Application.cpp">
@@ -197,6 +212,18 @@
     </ClCompile>
     <ClCompile Include="ModuleWindow.cpp">
       <Filter>Core\CoreModules</Filter>
+    </ClCompile>
+    <ClCompile Include="Module_Main_Menu.cpp">
+      <Filter>Game\Screens</Filter>
+    </ClCompile>
+    <ClCompile Include="Module_Map_Generation.cpp">
+      <Filter>Game\Screens</Filter>
+    </ClCompile>
+    <ClCompile Include="Room.cpp">
+      <Filter>Game\Screens\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="Dungeon.cpp">
+      <Filter>Game\Screens\Core</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

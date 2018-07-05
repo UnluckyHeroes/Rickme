@@ -9,8 +9,10 @@
 #define MAX_EFFECTS 500
 
 enum Repetitions {
-	LOOP = -1, ONCE, TWICE, THRICE
-
+	LOOP = -1,
+	ONCE,
+	TWICE,
+	THRICE
 };
 
 class ModuleAudio : public Module {
