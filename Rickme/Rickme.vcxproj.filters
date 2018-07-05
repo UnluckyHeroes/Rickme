@@ -136,9 +136,6 @@
     <ClInclude Include="Module_Main_Menu.h">
       <Filter>Game\Screens</Filter>
     </ClInclude>
-    <ClInclude Include="Module_Map_Generation.h">
-      <Filter>Game\Screens</Filter>
-    </ClInclude>
     <ClInclude Include="Room.h">
       <Filter>Game\Screens\Core</Filter>
     </ClInclude>
@@ -214,9 +211,6 @@
       <Filter>Core\CoreModules</Filter>
     </ClCompile>
     <ClCompile Include="Module_Main_Menu.cpp">
-      <Filter>Game\Screens</Filter>
-    </ClCompile>
-    <ClCompile Include="Module_Map_Generation.cpp">
       <Filter>Game\Screens</Filter>
     </ClCompile>
     <ClCompile Include="Room.cpp">

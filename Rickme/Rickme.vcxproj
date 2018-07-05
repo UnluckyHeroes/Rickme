@@ -127,7 +127,6 @@
     <ClInclude Include="Module.h" />
     <ClInclude Include="ModuleAudio.h" />
     <ClInclude Include="Module_Main_Menu.h" />
-    <ClInclude Include="Module_Map_Generation.h" />
     <ClInclude Include="Player.h" />
     <ClInclude Include="ModuleCollision.h" />
     <ClInclude Include="ModuleEnemies.h" />
@@ -153,7 +152,6 @@
     <ClCompile Include="main.cpp" />
     <ClCompile Include="ModuleAudio.cpp" />
     <ClCompile Include="Module_Main_Menu.cpp" />
-    <ClCompile Include="Module_Map_Generation.cpp" />
     <ClCompile Include="Player.cpp" />
     <ClCompile Include="ModuleCollision.cpp" />
     <ClCompile Include="ModuleEnemies.cpp" />
