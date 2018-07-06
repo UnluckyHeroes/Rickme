@@ -1,4 +1,4 @@
-#ifndef __DUNGEON_H__
+/*#ifndef __DUNGEON_H__
 #define __DUNGEON_H__	// @Carles Homs
 
 #include "Module.h"
@@ -22,14 +22,21 @@ public:
 	~Dungeon();
 
 public:
-	void generateDungeon(ushort positionX, ushort PositionY);
+	// List management functions
+	void pushRoom();
+	void popRoom();
+	void clear();
+
+	// Room management
+	Room *first = nullptr;
+	Room *last = nullptr;
+	Room *playerRoom = nullptr;
+
+public:
+	void generateDungeon(Room *currentRoom);
 
 	// Map
-	ushort maxHorizontal = 10;
-	ushort maxVertical = 10;
-	Room *dungeonMap[10][10];
-	Room *playerRoom;
-	Room_Position currentPos = { 4, 4 };
+	Room dungeonMap[10][10];
 
 	//Rooms
 	ushort numRooms;
@@ -42,8 +49,8 @@ public:
 
 	uint timer;	// Challenge mode timer
 
-	//Music 
-	//Mix_Music * MusicMainMenu = nullptr;
+				//Music 
+				//Mix_Music * MusicMainMenu = nullptr;
 };
 
-#endif	// __LEVEL_H__
+#endif	// __LEVEL_H__*/

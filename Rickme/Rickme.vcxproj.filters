@@ -40,6 +40,9 @@
     <Filter Include="Game\Screens\Core">
       <UniqueIdentifier>{8faae9c7-9c6d-49b2-824e-a2a4ecab8895}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Game\Screens\OldCore">
+      <UniqueIdentifier>{ac16b02d-66bc-4c5a-99f5-a487ba0847a7}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Animation.h">
@@ -142,6 +145,12 @@
     <ClInclude Include="Dungeon.h">
       <Filter>Game\Screens\Core</Filter>
     </ClInclude>
+    <ClInclude Include="OldDungeon.h">
+      <Filter>Game\Screens\OldCore</Filter>
+    </ClInclude>
+    <ClInclude Include="OldRoom.h">
+      <Filter>Game\Screens\OldCore</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Application.cpp">
@@ -218,6 +227,12 @@
     </ClCompile>
     <ClCompile Include="Dungeon.cpp">
       <Filter>Game\Screens\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="OldDungeon.cpp">
+      <Filter>Game\Screens\OldCore</Filter>
+    </ClCompile>
+    <ClCompile Include="OldRoom.cpp">
+      <Filter>Game\Screens\OldCore</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

@@ -127,6 +127,8 @@
     <ClInclude Include="Module.h" />
     <ClInclude Include="ModuleAudio.h" />
     <ClInclude Include="Module_Main_Menu.h" />
+    <ClInclude Include="OldDungeon.h" />
+    <ClInclude Include="OldRoom.h" />
     <ClInclude Include="Player.h" />
     <ClInclude Include="ModuleCollision.h" />
     <ClInclude Include="ModuleEnemies.h" />
@@ -145,13 +147,15 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Application.cpp" />
+    <ClCompile Include="Dungeon.cpp" />
     <ClCompile Include="Enemy.cpp" />
     <ClCompile Include="EnemyExample.cpp" />
     <ClCompile Include="Globals.cpp" />
-    <ClCompile Include="Dungeon.cpp" />
+    <ClCompile Include="OldDungeon.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="ModuleAudio.cpp" />
     <ClCompile Include="Module_Main_Menu.cpp" />
+    <ClCompile Include="OldRoom.cpp" />
     <ClCompile Include="Player.cpp" />
     <ClCompile Include="ModuleCollision.cpp" />
     <ClCompile Include="ModuleEnemies.cpp" />
