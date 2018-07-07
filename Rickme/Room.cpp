@@ -13,9 +13,9 @@ Room::Room() {
 
 Room::~Room() {}
 
-void Room::generateRoom(dungeon_levels dungeonLevel) {
+void Room::generateRoom(dungeon_levels paramDungeonLevel, room_types paramRoomType) {
 
-	rand() % (num2 - num1 + 1) + num1;
+	
 
 }
 

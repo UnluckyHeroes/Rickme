@@ -22,7 +22,9 @@ public:
 	~Dungeon();
 
 public:
-	void generateDungeon(ushort positionX, ushort PositionY);
+	void generateDungeon(ushort positionX, ushort PositionY, dungeon_levels paramDungeonLevel);
+	void allocateDoors(ushort positionX, ushort positionY);
+	bool putDoor(ushort paramNumRooms);
 
 	// Map
 	ushort maxHorizontal = 10;

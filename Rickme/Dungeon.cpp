@@ -9,8 +9,8 @@ Dungeon::Dungeon(dungeon_levels dungeonLevel) : playerRoom(nullptr), numRooms(0)
 
 	srand(time(NULL));
 
-	for (int i = 0; i < 10; i++) {		// Initialize all map pointers to nullptr
-		for (int j = 0; j < 10; j++) {
+	for (int i = 0; i < maxHorizontal; i++) {		// Initialize all map pointers to nullptr
+		for (int j = 0; j < maxVertical; j++) {
 			dungeonMap[i][j] = nullptr;
 		}
 	}
@@ -53,43 +53,44 @@ Dungeon::Dungeon(dungeon_levels dungeonLevel) : playerRoom(nullptr), numRooms(0)
 }
 
 Dungeon::~Dungeon() {	// Delete dungeon
-	clear();
+	
+	for (int i = 0; i < maxHorizontal; i++) {	// Delete all rooms in the dungeon
+		for (int j = 0; j < maxVertical; j++) {
+			if (dungeonMap[i][j] != nullptr)
+				delete dungeonMap[i][j];
+		}
+	}
 }
 
-void Dungeon::pushRoom() {	// Create room and allocate it's position on the map
-	if (numRooms == 0) {
-		first = last = new Room;
-		first->next = nullptr;
-	}
-	else {
-		Room *tempRoom = new Room;
-		last->next = tempRoom;
-		last = tempRoom;
-	}
-	numRooms++;
+void Dungeon::allocateDoors(ushort positionX, ushort positionY) {	// Function that has a 25% chance of adding doors to surrounding rooms
+	if (positionY + 1 < maxVertical && dungeonMap[positionX][positionY + 1] != nullptr && rand() % 4 == 0)
+		dungeonMap[positionX][positionY + 1]->topDoor = true;
+
+	if (positionX + 1 < maxHorizontal && dungeonMap[positionX + 1][positionY] != nullptr && rand() % 4 == 0)
+		dungeonMap[positionX + 1][positionY]->rightDoor = true;
+
+	if (positionY - 1 > 0 && dungeonMap[positionX][positionY - 1] != nullptr && rand() % 4 == 0)
+		dungeonMap[positionX][positionY - 1]->bottomDoor = true;
+
+	if (positionX - 1 > 0 && dungeonMap[positionX - 1][positionY] != nullptr && rand() % 4 == 0)
+		dungeonMap[positionX - 1][positionY]->leftDoor = true;
 }
 
-void Dungeon::popRoom() {	// Delete first room on the list
-	assert(numRooms > 0 && "Cannot delete a room from an empty list.");
+bool Dungeon::putDoor(ushort paramNumRooms) {	// Function that returns if a room should be created
 
-	if (numRooms == 1) {
-		delete first;
-		first = last = nullptr;
-	}
-	else {
-		Room *newfirst = first->next;
-		delete first;
-		first = newfirst;
-	}
-	numRooms--;
+	bool ret = true;
+
+	if (paramNumRooms > 16)	// Limit at 16% door chance (16 being the number of rooms is a coincidence, chance rate is decided by operation below)
+		paramNumRooms = 16;
+
+	if (rand() % 100 <= 80 - paramNumRooms * 4);	// Starts at 80% door probability, decays for each room created until 16% minimum chance
+	else
+		ret = false;
+
+	return ret;
 }
 
-void Dungeon::clear() {	// Delete all rooms starting by the first
-	while (numRooms > 0)
-		popRoom();
-}
-
-void Dungeon::generateDungeon(ushort positionX, ushort positionY) {
+void Dungeon::generateDungeon(ushort positionX, ushort positionY, dungeon_levels paramDungeonLevel) {
 
 	if (numRooms == 0) {	// Create starting room
 		dungeonMap[positionX][positionY] = new Room;
@@ -104,57 +105,73 @@ void Dungeon::generateDungeon(ushort positionX, ushort positionY) {
 	}
 
 	if (numRooms < maxRooms	// Potential new room for each side of the current room, doesn't run (else) when it's the boss room
-		&& dungeonMap[positionX][positionY]->topDoor == false
-		&& positionY + 1 < maxVertical
-		&& rand() % 4 == 0) {	// 25% chance of new room
+		&& dungeonMap[positionX][positionY]->topDoor == false					// Check that a room has not already been created
+		&& positionY + 1 < maxVertical											// Check if rooms would be off limits
+		&& dungeonMap[positionX][positionY + 1] == nullptr						// Check that a room is not already occupying that space
+		&& putDoor(numRooms) == true) {											// Function that checks by probability if a room is created
+
 		dungeonMap[positionX][positionY]->topDoor = true;						// Mark new exit for current room
 
 		dungeonMap[positionX][positionY + 1] = new Room;						// Create new room on required position in the map
 		dungeonMap[positionX][positionY + 1]->bottomDoor = true;				// Mark entrance door to currnet room in new room
 		dungeonMap[positionX][positionY + 1]->roomType = room_types::NORMAL;	// Assign room type
 
+		allocateDoors(positionX, positionY + 1);								// Probability of linking room to surrounding rooms (25% chance)
+
 		numRooms++;																// Increase number of rooms by 1
-		generateDungeon(positionX, positionY + 1);								// Use new room to create more
+		generateDungeon(positionX, positionY + 1, paramDungeonLevel);								// Use new room to create more
 	}
 	if (numRooms < maxRooms
 		&& dungeonMap[positionX][positionY]->rightDoor == false
 		&& positionX + 1 < maxHorizontal
-		&& rand() % 4 == 0) {	// 25% chance of new room
+		&& dungeonMap[positionX + 1][positionY] == nullptr
+		&& putDoor(numRooms) == true) {
+
 		dungeonMap[positionX][positionY]->rightDoor = true;
 
 		dungeonMap[positionX + 1][positionY] = new Room;
 		dungeonMap[positionX + 1][positionY]->leftDoor = true;
 		dungeonMap[positionX + 1][positionY]->roomType = room_types::NORMAL;
 
+		allocateDoors(positionX + 1, positionY);
+
 		numRooms++;
-		generateDungeon(positionX + 1, positionY);			// Use new room to create more
+		generateDungeon(positionX + 1, positionY, paramDungeonLevel);			// Use new room to create more
 	}
 	if (numRooms < maxRooms
 		&& dungeonMap[positionX][positionY]->bottomDoor == false
 		&& positionY - 1 >= 0
-		&& rand() % 4 == 0) {	// 25% chance of new room
+		&& dungeonMap[positionX][positionY - 1] == nullptr
+		&& putDoor(numRooms) == true) {
+
 		dungeonMap[positionX][positionY]->bottomDoor = true;
 
 		dungeonMap[positionX][positionY - 1] = new Room;
 		dungeonMap[positionX][positionY - 1]->topDoor = true;
 		dungeonMap[positionX][positionY - 1]->roomType = room_types::NORMAL;
 
+		allocateDoors(positionX, positionY - 1);
+
 		numRooms++;
-		generateDungeon(positionX, positionY - 1);			// Use new room to create more
+		generateDungeon(positionX, positionY - 1, paramDungeonLevel);			// Use new room to create more
 	}
 	if (numRooms < maxRooms
 		&& dungeonMap[positionX][positionY]->leftDoor == false
 		&& positionX - 1 >= 0
-		&& rand() % 4 == 0) {	// 25% chance of new room
+		&& dungeonMap[positionX - 1][positionY] == nullptr
+		&& putDoor(numRooms) == true) {
+
 		dungeonMap[positionX][positionY]->leftDoor = true;
 
 		dungeonMap[positionX - 1][positionY] = new Room;
 		dungeonMap[positionX - 1][positionY]->rightDoor = true;
 		dungeonMap[positionX - 1][positionY]->roomType = room_types::NORMAL;
 
+		allocateDoors(positionX - 1, positionY);
+
 		numRooms++;
-		generateDungeon(positionX - 1, positionY);			// Use new room to create more
+		generateDungeon(positionX - 1, positionY, paramDungeonLevel);			// Use new room to create more
 	}
 
-	dungeonMap[positionX][positionY]->generateRoom(dungeonMap[positionX][positionY]->roomType);
+	dungeonMap[positionX][positionY]->generateRoom(paramDungeonLevel, dungeonMap[positionX][positionY]->roomType);
 }
