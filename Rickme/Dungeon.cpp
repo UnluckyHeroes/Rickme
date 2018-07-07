@@ -56,13 +56,15 @@ Dungeon::~Dungeon() {	// Delete dungeon
 	
 	for (int i = 0; i < maxHorizontal; i++) {	// Delete all rooms in the dungeon
 		for (int j = 0; j < maxVertical; j++) {
-			if (dungeonMap[i][j] != nullptr)
+			if (dungeonMap[i][j] != nullptr) {
 				delete dungeonMap[i][j];
+				dungeonMap[i][j] = nullptr;
+			}
 		}
 	}
 }
 
-void Dungeon::allocateDoors(ushort positionX, ushort positionY) {	// Function that has a 25% chance of adding doors to surrounding rooms
+void Dungeon::linkRooms(ushort positionX, ushort positionY) {	// Function that has a 25% chance of adding doors to surrounding rooms
 	if (positionY + 1 < maxVertical && dungeonMap[positionX][positionY + 1] != nullptr && rand() % 4 == 0)
 		dungeonMap[positionX][positionY + 1]->topDoor = true;
 
@@ -116,7 +118,7 @@ void Dungeon::generateDungeon(ushort positionX, ushort positionY, dungeon_levels
 		dungeonMap[positionX][positionY + 1]->bottomDoor = true;				// Mark entrance door to currnet room in new room
 		dungeonMap[positionX][positionY + 1]->roomType = room_types::NORMAL;	// Assign room type
 
-		allocateDoors(positionX, positionY + 1);								// Probability of linking room to surrounding rooms (25% chance)
+		linkRooms(positionX, positionY + 1);									// Probability of linking room to surrounding rooms (25% chance each)
 
 		numRooms++;																// Increase number of rooms by 1
 		generateDungeon(positionX, positionY + 1, paramDungeonLevel);								// Use new room to create more
@@ -133,7 +135,7 @@ void Dungeon::generateDungeon(ushort positionX, ushort positionY, dungeon_levels
 		dungeonMap[positionX + 1][positionY]->leftDoor = true;
 		dungeonMap[positionX + 1][positionY]->roomType = room_types::NORMAL;
 
-		allocateDoors(positionX + 1, positionY);
+		linkRooms(positionX + 1, positionY);
 
 		numRooms++;
 		generateDungeon(positionX + 1, positionY, paramDungeonLevel);			// Use new room to create more
@@ -150,7 +152,7 @@ void Dungeon::generateDungeon(ushort positionX, ushort positionY, dungeon_levels
 		dungeonMap[positionX][positionY - 1]->topDoor = true;
 		dungeonMap[positionX][positionY - 1]->roomType = room_types::NORMAL;
 
-		allocateDoors(positionX, positionY - 1);
+		linkRooms(positionX, positionY - 1);
 
 		numRooms++;
 		generateDungeon(positionX, positionY - 1, paramDungeonLevel);			// Use new room to create more
@@ -167,7 +169,7 @@ void Dungeon::generateDungeon(ushort positionX, ushort positionY, dungeon_levels
 		dungeonMap[positionX - 1][positionY]->rightDoor = true;
 		dungeonMap[positionX - 1][positionY]->roomType = room_types::NORMAL;
 
-		allocateDoors(positionX - 1, positionY);
+		linkRooms(positionX - 1, positionY);
 
 		numRooms++;
 		generateDungeon(positionX - 1, positionY, paramDungeonLevel);			// Use new room to create more

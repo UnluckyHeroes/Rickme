@@ -1,5 +1,5 @@
-#ifndef __MODULE_MAP_GENERATOR_H__
-#define __MODULE_MAP_GENERATOR_H__	// @CarlesHoms
+#ifndef __MODULE_MAP_H__
+#define __MODULE_MAP_H__	// @CarlesHoms
 
 #include "Module.h"
 #include "Globals.h"
@@ -8,17 +8,19 @@
 
 struct SDL_Texture;
 
-class Module_Map_Generator : public Module
+class Module_Map : public Module
 {
 public:
-	Module_Map_Generator();
-	~Module_Map_Generator();
+	Module_Map();
+	~Module_Map();
 
 	bool Start();
 	update_status Update();
 	bool CleanUp();
 
 public:
+	Room_Position playerRoom;
+
 	//Textures
 	SDL_Texture* roomText = nullptr;
 	SDL_Texture* objectsText = nullptr;
@@ -34,4 +36,4 @@ public:
 
 };
 
-#endif	// __MODULE_MAP_GENERATOR_H__
+#endif	// __MODULE_MAP_H__

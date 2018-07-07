@@ -151,7 +151,7 @@
     <ClInclude Include="OldRoom.h">
       <Filter>Game\Screens\OldCore</Filter>
     </ClInclude>
-    <ClInclude Include="Module_Map_Generator.h">
+    <ClInclude Include="Module_Map.h">
       <Filter>Game\Screens</Filter>
     </ClInclude>
   </ItemGroup>
@@ -237,7 +237,7 @@
     <ClCompile Include="OldRoom.cpp">
       <Filter>Game\Screens\OldCore</Filter>
     </ClCompile>
-    <ClCompile Include="Module_Map_Generator.cpp">
+    <ClCompile Include="Module_Map.cpp">
       <Filter>Game\Screens</Filter>
     </ClCompile>
   </ItemGroup>

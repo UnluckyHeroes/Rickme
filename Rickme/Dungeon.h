@@ -23,15 +23,14 @@ public:
 
 public:
 	void generateDungeon(ushort positionX, ushort PositionY, dungeon_levels paramDungeonLevel);
-	void allocateDoors(ushort positionX, ushort positionY);
+	void linkRooms(ushort positionX, ushort positionY);
 	bool putDoor(ushort paramNumRooms);
 
 	// Map
 	ushort maxHorizontal = 10;
 	ushort maxVertical = 10;
 	Room *dungeonMap[10][10];
-	Room *playerRoom;
-	Room_Position currentPos = { 4, 4 };
+	Room_Position currentPos = { 4, 4 };	// Middle starting position
 
 	//Rooms
 	ushort numRooms;

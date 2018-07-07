@@ -2,9 +2,9 @@
 #include "Application.h"
 #include "ModuleTextures.h"
 #include "ModuleRender.h"
-#include "Module_Map_Generator.h"
+#include "Module_Map.h"
 
-Module_Map_Generator::Module_Map_Generator()	//@CarlesHoms
+Module_Map::Module_Map()	//@CarlesHoms
 {
 	//Doors to allocate colliders
 	SDL_Rect topDoor;
@@ -83,11 +83,10 @@ Module_Map_Generator::Module_Map_Generator()	//@CarlesHoms
 	leftDoor.h = 15;
 }
 
-Module_Map_Generator::~Module_Map_Generator()
-{}
+Module_Map::~Module_Map() {}
 
 // Load assets
-bool Module_Map_Generator::Start()
+bool Module_Map::Start()
 {
 	LOG("Loading background assets");
 	bool ret = true;
@@ -125,7 +124,7 @@ bool Module_Map_Generator::Start()
 }
 
 // Update: draw background
-update_status Module_Map_Generator::Update()
+update_status Module_Map::Update()
 {
 	App->render->Blit(backgroundText, 0, 0, &backgroundRect); // background
 	App->render->Blit(titleText, 52, 60, &titleBoxRect); // logo back mark
@@ -151,7 +150,7 @@ update_status Module_Map_Generator::Update()
 	return UPDATE_CONTINUE;
 }
 
-bool Module_Map_Generator::CleanUp()
+bool Module_Map::CleanUp()
 {
 	App->player1->Disable();
 	App->shieldsP1->Disable();
