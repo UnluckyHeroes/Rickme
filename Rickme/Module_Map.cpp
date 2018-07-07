@@ -6,81 +6,29 @@
 
 Module_Map::Module_Map()	//@CarlesHoms
 {
-	//Doors to allocate colliders
-	SDL_Rect topDoor;
-	SDL_Rect rightDoor;
-	SDL_Rect bottomDoor;
-	SDL_Rect leftDoor;
+	allocateRoomDrawing();	// Position room drawing squares
+	allocateRoomTiling();	// Position room tiling squares
 
-	SDL_Rect roomDrawing[3][3];	// 3x3 tilemap used to draw the room (426x270px, 142x90px/tile)
-	SDL_Rect tileMap[6][9];	// 6x9 tilemap used to position things on within the room (332x180px, 55x20/tile)
+	//Door Rects (3x3 tilemap used to draw the room (426x270px, 142x90px/tile))
+	topDoor.x = 142 * 1 + offsetBorders.x;
+	topDoor.y = 90 * 0 + offsetBorders.y;
+	topDoor.w = 142;
+	topDoor.h = 90;
 
-	//Tiling Rects: Starting from top left, left to right
-	roomDrawing[0][0].x = 40;
-	roomDrawing[0][0].y = 116;
-	roomDrawing[0][0].w = 167;
-	roomDrawing[0][0].h = 15;
+	rightDoor.x = 142 * 2 + offsetBorders.x;
+	rightDoor.y = 90 * 1 + offsetBorders.y;
+	rightDoor.w = 142;
+	rightDoor.h = 90;
 
-	roomDrawing[0][1].x = 40;
-	roomDrawing[0][1].y = 116;
-	roomDrawing[0][1].w = 167;
-	roomDrawing[0][1].h = 15;
+	bottomDoor.x = 142 * 1 + offsetBorders.x;
+	bottomDoor.y = 90 * 2 + offsetBorders.y;
+	bottomDoor.w = 142;
+	bottomDoor.h = 90;
 
-	roomDrawing[0][2].x = 40;
-	roomDrawing[0][2].y = 116;
-	roomDrawing[0][2].w = 167;
-	roomDrawing[0][2].h = 15;
-
-	roomDrawing[1][0].x = 40;
-	roomDrawing[1][0].y = 116;
-	roomDrawing[1][0].w = 167;
-	roomDrawing[1][0].h = 15;
-
-	roomDrawing[1][1].x = 40;
-	roomDrawing[1][1].y = 116;
-	roomDrawing[1][1].w = 167;
-	roomDrawing[1][1].h = 15;
-
-	roomDrawing[1][2].x = 40;
-	roomDrawing[1][2].y = 116;
-	roomDrawing[1][2].w = 167;
-	roomDrawing[1][2].h = 15;
-
-	roomDrawing[2][0].x = 40;
-	roomDrawing[2][0].y = 116;
-	roomDrawing[2][0].w = 167;
-	roomDrawing[2][0].h = 15;
-
-	roomDrawing[2][1].x = 40;
-	roomDrawing[2][1].y = 116;
-	roomDrawing[2][1].w = 167;
-	roomDrawing[2][1].h = 15;
-
-	roomDrawing[2][2].x = 40;
-	roomDrawing[2][2].y = 116;
-	roomDrawing[2][2].w = 167;
-	roomDrawing[2][2].h = 15;
-
-	//Door Rects
-	topDoor.x = 40;
-	topDoor.y = 116;
-	topDoor.w = 167;
-	topDoor.h = 15;
-
-	rightDoor.x = 40;
-	rightDoor.y = 116;
-	rightDoor.w = 167;
-	rightDoor.h = 15;
-
-	bottomDoor.x = 40;
-	bottomDoor.y = 116;
-	bottomDoor.w = 167;
-	bottomDoor.h = 15;
-
-	leftDoor.x = 40;
-	leftDoor.y = 116;
-	leftDoor.w = 167;
-	leftDoor.h = 15;
+	leftDoor.x = 142 * 0 + offsetBorders.x;
+	leftDoor.y = 90 * 1 + offsetBorders.y;
+	leftDoor.w = 142;
+	leftDoor.h = 90;
 }
 
 Module_Map::~Module_Map() {}
@@ -167,4 +115,32 @@ bool Module_Map::CleanUp()
 	App->mixer->UnloadMusic(MusicMainMenu);
 
 	return true;
+}
+
+void Module_Map::allocateRoomDrawing() {	// Position room drawing tiles
+	ushort posX = 142;	// 3x3 tilemap used to draw the room (426x270px, 142x90px/tile)
+	ushort posY = 90;
+
+	for (int i = 0; i < 3; i++) {	
+		for (int j = 0; j < 3; j++) {
+			roomDrawing[i][j].x = posX * j + offsetBorders;
+			roomDrawing[i][j].y = posY * i + offsetBorders;
+			roomDrawing[i][j].w = posX;
+			roomDrawing[i][j].h = posY;
+		}
+	}
+}
+
+void Module_Map::allocateRoomTiling() {	// Position room interior tiles
+	ushort posX = 55;	// 6x9 tilemap used to position things on within the room (332x180px, 55x20/tile)
+	ushort posY = 20;
+
+	for (int i = 0; i < 6; i++) {
+		for (int j = 0; j < 9; j++) {
+			roomDrawing[i][j].x = posX * j + offsetRoomInterior;
+			roomDrawing[i][j].y = posY * i + offsetRoomInterior;
+			roomDrawing[i][j].w = posX;
+			roomDrawing[i][j].h = posY;
+		}
+	}
 }

@@ -8,6 +8,11 @@
 
 struct SDL_Texture;
 
+struct Offset {
+	ushort x;
+	ushort y;
+};
+
 class Module_Map : public Module
 {
 public:
@@ -19,11 +24,18 @@ public:
 	bool CleanUp();
 
 public:
+	void allocateRoomDrawing();;
+	void allocateRoomTiling();
+
 	Room_Position playerRoom;
 
 	//Textures
 	SDL_Texture* roomText = nullptr;
 	SDL_Texture* objectsText = nullptr;
+
+	//Screen offsets
+	Offset offsetBorders = { 27, 0 };	// Black borders on the screen
+	Offset offsetRoomInterior = { 27 + 48, 0 + 45 };	// Black borders + room walls
 
 	//Doors to allocate colliders
 	SDL_Rect topDoor;
