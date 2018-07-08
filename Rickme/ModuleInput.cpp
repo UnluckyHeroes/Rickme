@@ -84,15 +84,15 @@ update_status ModuleInput::PreUpdate()
 		}
 	}
 
-	//CONTROLLER INPUT
+	//CONTROLLER INPUT		// @DidacRomero
+	// All code from here on is Controller Input realted, made to work for P1 only (P2 comented)
+	// The Code is prepared to have more controllers if needed. The commented lines were from P2 gamepad managing.
 	for (int i = 0; i < SDL_NumJoysticks(); ++i)
 	{
 		if (SDL_IsGameController(i))
 		{
 			if (i == 0)
 			{
-				if (SDL_IsGameController(i))
-				{
 					gamepadP1 = SDL_GameControllerOpen(i);
 					if (SDL_GameControllerGetAttached(gamepadP1))
 					{
@@ -104,15 +104,15 @@ update_status ModuleInput::PreUpdate()
 						gamepadP1StartPressed = SDL_GameControllerGetButton(gamepadP1, SDL_CONTROLLER_BUTTON_START);
 						gamepadP1con = true;
 					}
-					else
+					else if (gamepadP1 != nullptr)
 					{
 						SDL_GameControllerClose(gamepadP1);
 						gamepadP1 = nullptr;
 						gamepadP1con = false;
 					}
 				}
-			}
-			else if (i<1)
+
+			/*else if (i<1)
 			{
 				gamepadP2con = false;
 				SDL_GameControllerClose(gamepadP2);
@@ -142,7 +142,7 @@ update_status ModuleInput::PreUpdate()
 						gamepadP2con = false;
 					}
 				}
-			}
+			}*/
 		}
 	}
 
@@ -197,63 +197,63 @@ update_status ModuleInput::PreUpdate()
 	keyboard[SDL_SCANCODE_O] = KEY_STATE::KEY_REPEAT;
 	}*/
 
-	//CHECK P2 Left Axis X & Y
-	if (gamepadP2LAxisX > 3200)
-	{
-		keyboard[SDL_SCANCODE_D] = KEY_STATE::KEY_REPEAT;
-	}
-	else if (gamepadP2LAxisX < -3200)
-	{
-		keyboard[SDL_SCANCODE_A] = KEY_STATE::KEY_REPEAT;
-	}
+	////CHECK P2 Left Axis X & Y
+	//if (gamepadP2LAxisX > 3200)
+	//{
+	//	keyboard[SDL_SCANCODE_D] = KEY_STATE::KEY_REPEAT;
+	//}
+	//else if (gamepadP2LAxisX < -3200)
+	//{
+	//	keyboard[SDL_SCANCODE_A] = KEY_STATE::KEY_REPEAT;
+	//}
 
-	if (gamepadP2LAxisY < -6400)
-	{
-		keyboard[SDL_SCANCODE_W] = KEY_STATE::KEY_REPEAT;
-	}
-	else if (gamepadP2LAxisY > 6400)
-	{
-		keyboard[SDL_SCANCODE_S] = KEY_STATE::KEY_REPEAT;
-	}
+	//if (gamepadP2LAxisY < -6400)
+	//{
+	//	keyboard[SDL_SCANCODE_W] = KEY_STATE::KEY_REPEAT;
+	//}
+	//else if (gamepadP2LAxisY > 6400)
+	//{
+	//	keyboard[SDL_SCANCODE_S] = KEY_STATE::KEY_REPEAT;
+	//}
 
-	if (gamepadP1StartPressed == true && keyboard[SDL_SCANCODE_SPACE] == KEY_STATE::KEY_IDLE)
-	{
-		keyboard[SDL_SCANCODE_SPACE] = KEY_STATE::KEY_DOWN;
-	}
+	//if (gamepadP1StartPressed == true && keyboard[SDL_SCANCODE_SPACE] == KEY_STATE::KEY_IDLE)
+	//{
+	//	keyboard[SDL_SCANCODE_SPACE] = KEY_STATE::KEY_DOWN;
+	//}
 
-	//CHECK P2 Buttons
+	////CHECK P2 Buttons
 
-	if (gamepadP2APressed == true && keyboard[SDL_SCANCODE_V] == KEY_STATE::KEY_IDLE)
-	{
-		keyboard[SDL_SCANCODE_V] = KEY_STATE::KEY_DOWN;
-	}
-	else if (gamepadP2APressed == true)
-	{
-		keyboard[SDL_SCANCODE_V] = KEY_STATE::KEY_REPEAT;
-	}
+	//if (gamepadP2APressed == true && keyboard[SDL_SCANCODE_V] == KEY_STATE::KEY_IDLE)
+	//{
+	//	keyboard[SDL_SCANCODE_V] = KEY_STATE::KEY_DOWN;
+	//}
+	//else if (gamepadP2APressed == true)
+	//{
+	//	keyboard[SDL_SCANCODE_V] = KEY_STATE::KEY_REPEAT;
+	//}
 
-	if (gamepadP2XPressed == true && keyboard[SDL_SCANCODE_B] == KEY_STATE::KEY_IDLE)
-	{
-		keyboard[SDL_SCANCODE_B] = KEY_STATE::KEY_DOWN;
-	}
-	else if (gamepadP2XPressed == true)
-	{
-		keyboard[SDL_SCANCODE_B] = KEY_STATE::KEY_REPEAT;
-	}
+	//if (gamepadP2XPressed == true && keyboard[SDL_SCANCODE_B] == KEY_STATE::KEY_IDLE)
+	//{
+	//	keyboard[SDL_SCANCODE_B] = KEY_STATE::KEY_DOWN;
+	//}
+	//else if (gamepadP2XPressed == true)
+	//{
+	//	keyboard[SDL_SCANCODE_B] = KEY_STATE::KEY_REPEAT;
+	//}
 
-	if (gamepadP2StartPressed == true && keyboard[SDL_SCANCODE_SPACE] == KEY_STATE::KEY_IDLE)
-	{
-		keyboard[SDL_SCANCODE_SPACE] = KEY_STATE::KEY_DOWN;
-	}
+	//if (gamepadP2StartPressed == true && keyboard[SDL_SCANCODE_SPACE] == KEY_STATE::KEY_IDLE)
+	//{
+	//	keyboard[SDL_SCANCODE_SPACE] = KEY_STATE::KEY_DOWN;
+	//}
 
-	if (gamepadP2YPressed == true && keyboard[SDL_SCANCODE_3] == KEY_STATE::KEY_IDLE)
-	{
-		keyboard[SDL_SCANCODE_3] = KEY_STATE::KEY_DOWN;
-	}
-	else if (gamepadP2YPressed == true)
-	{
-		keyboard[SDL_SCANCODE_3] = KEY_STATE::KEY_REPEAT;
-	}
+	//if (gamepadP2YPressed == true && keyboard[SDL_SCANCODE_3] == KEY_STATE::KEY_IDLE)
+	//{
+	//	keyboard[SDL_SCANCODE_3] = KEY_STATE::KEY_DOWN;
+	//}
+	//else if (gamepadP2YPressed == true)
+	//{
+	//	keyboard[SDL_SCANCODE_3] = KEY_STATE::KEY_REPEAT;
+	//}
 	/*else
 	{
 	keyboard[SDL_SCANCODE_O] = KEY_STATE::KEY_REPEAT;
