@@ -10,7 +10,7 @@
 #include "ModuleFadeToBlack.h"
 #include "ModuleUI.h"
 
-Player::Player()	// @CarlesHoms @Andres
+Player::Player(player_number paramPlayerNumber)	// @CarlesHoms
 {
 	
 }

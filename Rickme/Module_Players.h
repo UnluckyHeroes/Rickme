@@ -1,5 +1,5 @@
 #ifndef	__MODULEP_LAYERS_H__
-#define	__MODULE_PLAYERS_H__
+#define	__MODULE_PLAYERS_H__	//@JoanMarín
 
 #include "Module.h"
 #include "Animation.h"
@@ -33,6 +33,7 @@ enum modifier {
 class Module_Players :public Module {
 public:
 
+	Module_Players();
 	Module_Players(player_number playerNumber_);
 	~Module_Players();
 

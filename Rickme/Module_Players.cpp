@@ -1,7 +1,10 @@
 #include "Module_Players.h"
 
+Module_Players::Module_Players() {	//@Joan Marín
 
-Module_Players::Module_Players(player_number playerNumber_) { //@Joan Marín
+}
+
+Module_Players::Module_Players(player_number playerNumber_) {
 
 	if (playerNumber_ == player_number::PLAYER_1) {
 

@@ -26,7 +26,7 @@ Application::Application()
 	//modules[i++] = scoreboard = new ModuleScoreboard();
 	modules[i++] = particles = new ModuleParticles();
 	modules[i++] = enemies = new ModuleEnemies();
-	modules[i++] = player1 = new Module_Players(PLAYER_NUMBER::PLAYER_1);
+	modules[i++] = players = new Module_Players();	// modules[i++] = player1 = new Module_Players(player_number::PLAYER_1);
 	modules[i++] = collision = new ModuleCollision();
 	modules[i++] = UI = new ModuleUI();
 	modules[i++] = fade = new ModuleFadeToBlack();

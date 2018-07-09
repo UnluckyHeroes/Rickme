@@ -13,8 +13,7 @@ class ModuleRender;
 class ModuleMixer;
 class ModuleAudio;
 class ModuleFadeToBlack;
-class ModulePlayer;
-class ModulePlayer1;
+class Module_Players;
 class ModuleParticles;
 class ModuleMainMenu;
 class ModuleScoreboard;
@@ -34,7 +33,7 @@ public:
 	ModuleMixer* mixer = nullptr;
 	ModuleAudio* audio = nullptr;
 	ModuleFadeToBlack* fade = nullptr;
-	ModulePlayer1* player1 = nullptr;
+	Module_Players* players = nullptr;
 	ModuleParticles* particles = nullptr;
 	ModuleMainMenu* mainMenu = nullptr;
 	ModuleScoreboard* scoreboard = nullptr;
