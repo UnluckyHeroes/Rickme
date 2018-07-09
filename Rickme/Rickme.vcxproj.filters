@@ -136,6 +136,8 @@
     <ClInclude Include="ModuleAudio.h">
       <Filter>Core\CoreModules</Filter>
     </ClInclude>
+    <ClInclude Include="ModulePlayer.h">
+      <Filter>Game\Players\Core</Filter>
     <ClInclude Include="Module_Main_Menu.h">
       <Filter>Game\Screens</Filter>
     </ClInclude>
@@ -222,6 +224,8 @@
     <ClCompile Include="ModuleWindow.cpp">
       <Filter>Core\CoreModules</Filter>
     </ClCompile>
+    <ClCompile Include="ModulePlayer.cpp">
+      <Filter>Game\Players\Core</Filter>
     <ClCompile Include="Module_Main_Menu.cpp">
       <Filter>Game\Screens</Filter>
     </ClCompile>
