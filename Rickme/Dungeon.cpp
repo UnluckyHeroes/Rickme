@@ -4,7 +4,7 @@
 #include "Globals.h"
 #include "Dungeon.h"
 
-Dungeon::Dungeon(dungeon_levels dungeonLevel) : playerRoom(nullptr), numRooms(0) {
+Dungeon::Dungeon(dungeon_levels dungeonLevel) : numRooms(0) {
 	assert(dungeonLevel >= dungeon_levels::LEVEL_1 && dungeonLevel <= dungeon_levels::LEVEL_5 && "Dungeon level must be between 1 and 5");
 
 	srand(time(NULL));
@@ -105,8 +105,8 @@ void Dungeon::generateDungeon(ushort positionX, ushort positionY, dungeon_levels
 		dungeonMap[positionX][positionY]->roomType = room_types::BOSS;
 		numRooms++;
 	}
-
-	if (numRooms < maxRooms	// Potential new room for each side of the current room, doesn't run (else) when it's the boss room
+	// For each potential door, check if it's possible to create a room and do so if the probability chance allows it
+	if (numRooms < maxRooms														// Check that room limit hasn't been reached
 		&& dungeonMap[positionX][positionY]->topDoor == false					// Check that a room has not already been created
 		&& positionY + 1 < maxVertical											// Check if rooms would be off limits
 		&& dungeonMap[positionX][positionY + 1] == nullptr						// Check that a room is not already occupying that space
@@ -121,7 +121,7 @@ void Dungeon::generateDungeon(ushort positionX, ushort positionY, dungeon_levels
 		linkRooms(positionX, positionY + 1);									// Probability of linking room to surrounding rooms (25% chance each)
 
 		numRooms++;																// Increase number of rooms by 1
-		generateDungeon(positionX, positionY + 1, paramDungeonLevel);								// Use new room to create more
+		generateDungeon(positionX, positionY + 1, paramDungeonLevel);			// Use new room to create more
 	}
 	if (numRooms < maxRooms
 		&& dungeonMap[positionX][positionY]->rightDoor == false

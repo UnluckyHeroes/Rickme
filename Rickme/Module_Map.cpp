@@ -38,35 +38,34 @@ bool Module_Map::Start()
 {
 	LOG("Loading background assets");
 	bool ret = true;
-	backgroundText = App->textures->Load("Assets/Sprites/User_Interface/Intro/logo-background.png");
-	titleText = App->textures->Load("Assets/Sprites/User_Interface/Intro/logo.png");
-	viscoGamesText = App->textures->Load("Assets/Sprites/User_Interface/Intro/visco_games.png");
-	//orangeLettersText = App->textures->Load("Assets/Sprites/Backgrounds/1_FullMap.png");
-	//whiteLettersText = App->textures->Load("Assets/Sprites/Backgrounds/1_FullMap.png");
+	roomText = App->textures->Load("");
+	objectsText = App->textures->Load("");
 
-	App->player1->bluePower = LEVEL_1;		// Flag/counter for blue power level
-	App->player1->orangePower = LEVEL_0;	// Flag/counter for orange power level
-	App->player1->yellowPower = LEVEL_0;	// Flag/counter for yellow power level
-	App->player1->greenPower = LEVEL_0;		// Flag/counter for green power level
+	switch (playerLevel) {
+	case dungeon_levels::LEVEL_1:
+		createdDungeon = new Dungeon(dungeon_levels::LEVEL_1);
+		break;
+	case dungeon_levels::LEVEL_2:
+		createdDungeon = new Dungeon(dungeon_levels::LEVEL_2);
+		break;
+	case dungeon_levels::LEVEL_3:
+		createdDungeon = new Dungeon(dungeon_levels::LEVEL_3);
+		break;
+	case dungeon_levels::LEVEL_4:
+		createdDungeon = new Dungeon(dungeon_levels::LEVEL_4);
+		break;
+	case dungeon_levels::LEVEL_5:
+		createdDungeon = new Dungeon(dungeon_levels::LEVEL_5);
+		break;
+	}
 
-	App->player2->bluePower = LEVEL_1;		// Flag/counter for blue power level
-	App->player2->orangePower = LEVEL_0;	// Flag/counter for orange power level
-	App->player2->yellowPower = LEVEL_0;	// Flag/counter for yellow power level
-	App->player2->greenPower = LEVEL_0;		// Flag/counter for green power level
-
-	App->player1->Disable();
-	App->shieldsP1->Disable();
-
-	App->player2->Disable();
-	App->shieldsP2->Disable();
-
-	App->enemies->Disable();
-	App->collision->Disable();
+	createdDungeon->generateDungeon(createdDungeon->startingPos.x, createdDungeon->startingPos.y, playerLevel);
+	playerRoom = { createdDungeon->startingPos.x, createdDungeon->startingPos.y };
 
 	//Music
-	MusicMainMenu = App->mixer->LoadMusic("Assets/Audio/Music/02_Title.ogg");
+	/*MusicMainMenu = App->mixer->LoadMusic("Assets/Audio/Music/02_Title.ogg");
 	Mix_VolumeMusic(MUSICVol);
-	Mix_FadeInMusic(MusicMainMenu, 0, 1000);
+	Mix_FadeInMusic(MusicMainMenu, 0, 1000);*/
 
 	return ret;
 }
@@ -74,10 +73,13 @@ bool Module_Map::Start()
 // Update: draw background
 update_status Module_Map::Update()
 {
-	App->render->Blit(backgroundText, 0, 0, &backgroundRect); // background
-	App->render->Blit(titleText, 52, 60, &titleBoxRect); // logo back mark
-	App->render->Blit(titleText, 36, 27, &titleRect); // logo
-	App->render->Blit(viscoGamesText, 75, 160, &viscoGamesRect); // Visco Games
+	for (int i = 0; i < 3; i++) {
+		for (int j = 0; j < 3; j++) {
+			App->render->Blit(roomText, roomDrawing[i][j].x, roomDrawing[i][j].y, &roomDrawing[i][j]);
+		}
+	}
+
+	drawDoors();	// Draw all doors on current room and add their colliders
 
 	if (App->input->keyboard[SDL_SCANCODE_SPACE] == 1)
 	{
@@ -100,19 +102,15 @@ update_status Module_Map::Update()
 
 bool Module_Map::CleanUp()
 {
-	App->player1->Disable();
-	App->shieldsP1->Disable();
-	App->player2->Disable();
-	App->shieldsP2->Disable();
-
 	LOG("Unloading Main Menu");
-	App->textures->Unload(backgroundText);
-	App->textures->Unload(titleText);
-	App->textures->Unload(viscoGamesText);
-	//App->textures->Unload(orangeLettersText);
-	//App->textures->Unload(whiteLettersText);
-	Mix_FadeOutMusic(TIMEFADE);
-	App->mixer->UnloadMusic(MusicMainMenu);
+	App->textures->Unload(roomText);
+	App->textures->Unload(objectsText);
+
+	/*Mix_FadeOutMusic(TIMEFADE);
+	App->mixer->UnloadMusic(MusicMainMenu);*/
+
+	delete createdDungeon;	// Dungeon destructor deletes all rooms inside
+	createdDungeon = nullptr;
 
 	return true;
 }
@@ -123,8 +121,8 @@ void Module_Map::allocateRoomDrawing() {	// Position room drawing tiles
 
 	for (int i = 0; i < 3; i++) {	
 		for (int j = 0; j < 3; j++) {
-			roomDrawing[i][j].x = posX * j + offsetBorders;
-			roomDrawing[i][j].y = posY * i + offsetBorders;
+			roomDrawing[i][j].x = posX * j + offsetBorders.x;
+			roomDrawing[i][j].y = posY * i + offsetBorders.y;
 			roomDrawing[i][j].w = posX;
 			roomDrawing[i][j].h = posY;
 		}
@@ -137,10 +135,29 @@ void Module_Map::allocateRoomTiling() {	// Position room interior tiles
 
 	for (int i = 0; i < 6; i++) {
 		for (int j = 0; j < 9; j++) {
-			roomDrawing[i][j].x = posX * j + offsetRoomInterior;
-			roomDrawing[i][j].y = posY * i + offsetRoomInterior;
+			roomDrawing[i][j].x = posX * j + offsetRoomInterior.x;
+			roomDrawing[i][j].y = posY * i + offsetRoomInterior.y;
 			roomDrawing[i][j].w = posX;
 			roomDrawing[i][j].h = posY;
 		}
+	}
+}
+
+void Module_Map::drawDoors() {
+	if (createdDungeon->dungeonMap[playerRoom.x][playerRoom.y]->topDoor == true) {	// Draw top door
+		App->render->Blit(roomText, topDoor.x, topDoor.y, &roomDrawing[0][1]);
+		// addCollider;
+	}
+	if (createdDungeon->dungeonMap[playerRoom.x][playerRoom.y]->rightDoor == true) {	// Draw right door
+		App->render->Blit(roomText, rightDoor.x, rightDoor.y, &roomDrawing[1][2]);
+		// addCollider;
+	}
+	if (createdDungeon->dungeonMap[playerRoom.x][playerRoom.y]->bottomDoor == true) {	// Draw bottom door
+		App->render->Blit(roomText, bottomDoor.x, bottomDoor.y, &roomDrawing[2][1]);
+		// addCollider;
+	}
+	if (createdDungeon->dungeonMap[playerRoom.x][playerRoom.y]->leftDoor == true) {	// Draw left door
+		App->render->Blit(roomText, leftDoor.x, leftDoor.y, &roomDrawing[1][0]);
+		// addCollider;
 	}
 }

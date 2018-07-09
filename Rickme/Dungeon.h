@@ -30,7 +30,7 @@ public:
 	ushort maxHorizontal = 10;
 	ushort maxVertical = 10;
 	Room *dungeonMap[10][10];
-	Room_Position currentPos = { 4, 4 };	// Middle starting position
+	iPoint startingPos = { 4, 4 };	// Middle starting position
 
 	//Rooms
 	ushort numRooms;

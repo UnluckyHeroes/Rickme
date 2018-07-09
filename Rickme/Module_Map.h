@@ -26,8 +26,13 @@ public:
 public:
 	void allocateRoomDrawing();;
 	void allocateRoomTiling();
+	void drawDoors();
 
-	Room_Position playerRoom;
+	Dungeon* createdDungeon = nullptr;	// To dynamically allocate the dungeon
+
+	// Player variables
+	iPoint playerRoom;
+	dungeon_levels playerLevel;
 
 	//Textures
 	SDL_Texture* roomText = nullptr;

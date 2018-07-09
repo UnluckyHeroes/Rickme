@@ -4,6 +4,7 @@
 #include "Module.h"
 #include "Globals.h"
 #include "Dungeon.h"
+#include "p2Point.h"
 
 #include "SDL_mixer/include/SDL_mixer.h"
 #pragma comment(lib,"SDL_mixer/libx86/SDL2_mixer.lib")
@@ -39,11 +40,6 @@ enum class object_list {	//Enumeration of all things that can be filling a tile
 	CRYOPOD
 };
 
-struct Room_Position {
-	int x;
-	int y;
-};
-
 class Room {
 public:
 	Room();
@@ -69,7 +65,7 @@ public:
 	ushort maxDoors;
 
 	room_types roomType;
-	Room_Position position;
+	iPoint position;
 
 	//Music 
 	//Mix_Music * MusicMainMenu = nullptr;
