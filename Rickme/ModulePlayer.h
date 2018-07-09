@@ -9,9 +9,10 @@
 #include "Application.h"
 
 
+
 struct SDL_Texture;
 
-enum PLAYER_NUMBER {
+enum class PLAYER_NUMBER {
 	PLAYER_1,
 	PLAYER_2
 };
@@ -36,6 +37,7 @@ public:
 	ModulePlayer(PLAYER_NUMBER playerNumber_);
 	~ModulePlayer();
 
+	bool Start();
 	bool Init();
 	update_status Update();
 	bool CleanUp();
@@ -44,10 +46,11 @@ public:
 
 	void PickGun();
 	void PickMod();
-	void const Move();
-	void const Shoot();
 
-	PLAYER_NUMBER playerNumber; //This variable will tell if it's player 1, or player 2, etc. and by this, it will load different animations, textures,etc. All in the constructor
+	void const Move();			//Player movement
+	
+	void const Aim();			//Determines in which direction the player is aiming at
+	void const Shoot();			//Shoot
 
 	uint playerSpeed = 2;		//Speed at which the player moves
 	
@@ -58,6 +61,8 @@ public:
 
 private:
 	
+	uint hp;					//Player health points
+
 	//These variables will define the controls of the player
 	
 	SDL_Scancode upwardsKey;	//Go upwards

@@ -1,8 +1,9 @@
 #include "ModulePlayer.h"
 
-ModulePlayer::ModulePlayer(PLAYER_NUMBER playerNumber_): playerNumber(playerNumber_){ //@Joan Marín
+
+ModulePlayer::ModulePlayer(PLAYER_NUMBER playerNumber_){ //@Joan Marín
 	
-	if (playerNumber == PLAYER_1) {
+	if (playerNumber_ == PLAYER_NUMBER::PLAYER_1) {
 
 		/*	Stablish controls for player 1:
 		Going left  ->	A
@@ -23,12 +24,14 @@ ModulePlayer::ModulePlayer(PLAYER_NUMBER playerNumber_): playerNumber(playerNumb
 ModulePlayer::~ModulePlayer()
 {}
 
-bool ModulePlayer::Init(){}
+bool ModulePlayer::Start(){}
 
 bool ModulePlayer::CleanUp(){}
 
 update_status ModulePlayer::Update(){
 	
+	
+
 	Move();
 	
 	if (App->input->keyboard[shootKey] == KEY_STATE::KEY_REPEAT)
