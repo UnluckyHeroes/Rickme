@@ -112,9 +112,7 @@ bool ModuleEnemies::CleanUp()
 			enemies[i] = nullptr;
 		}
 
-
 		queue[i].type = ENEMY_TYPES::NO_TYPE;
-
 		queue[i].x = 0;
 		queue[i].y = 0;
 

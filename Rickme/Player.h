@@ -11,22 +11,62 @@
 struct SDL_Texture;
 struct Collider;
 
-class Player : public Module
+enum class player_number {
+	PLAYER_1,
+	PLAYER_2,
+	PLAYER_3,
+	PLAYER_4
+};
+
+enum weapon {
+	PISTOL,
+	SHOTGUN,
+	RIFLE
+};
+
+enum modifier {	//The modifier will add different effects to the weapon: damage, slow effect,etc.
+	NAIL,
+	ELECRTICITY,
+	FIRE,
+	NONE
+};
+
+class Player
 {
 public:
-	Player();
+	Player(player_number paramPlayerNumber);
 	~Player();
 
 	bool Start();
+	bool Init();
 	update_status Update();
 	bool CleanUp();
-
-	void OnCollision(Collider* c1, Collider* c2) override;
-	void checkBluePowerParticleLimit();
 
 public:
 
 	SDL_Texture* graphics = nullptr;
+
+	void const Move();			//Player movement
+	void const Aim();			//Determines in which direction the player is aiming at
+	void const Shoot();			//Shoot
+
+	uint playerSpeed = 2;		//Speed at which the player moves
+
+	iPoint playerPosition;		//Position of the player {x,y}
+
+	weapon currentWeapon;		//Current weapon of the player
+	modifier currentModifier;	//Current modifier of the weapon
+
+private:
+
+	uint healthPoints;			//Player health points
+
+	//These variables will define the controls of the player
+	SDL_Scancode upwardsKey;	//Go upwards
+	SDL_Scancode downwardsKey;	//Go downwards
+	SDL_Scancode leftKey;		//Go left
+	SDL_Scancode rightKey;		//Go right
+	SDL_Scancode shootKey;		//Shoot
 
 	// Animations
 

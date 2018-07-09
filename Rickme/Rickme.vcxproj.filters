@@ -37,16 +37,11 @@
     <Filter Include="Game\Players\Core">
       <UniqueIdentifier>{fcd9798c-21c3-4571-aca5-169dc70f5b96}</UniqueIdentifier>
     </Filter>
-
-    <Filter Include="Game\Enemies\Stage1\Enemies">
-      <UniqueIdentifier>{ba26e066-6e5e-4918-89f6-b20993fea608}</UniqueIdentifier>
-
     <Filter Include="Game\Screens\Core">
       <UniqueIdentifier>{8faae9c7-9c6d-49b2-824e-a2a4ecab8895}</UniqueIdentifier>
     </Filter>
     <Filter Include="Game\Screens\OldCore">
       <UniqueIdentifier>{ac16b02d-66bc-4c5a-99f5-a487ba0847a7}</UniqueIdentifier>
-
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -86,11 +81,9 @@
     <ClInclude Include="Enemy.h">
       <Filter>Game\Enemies\Core</Filter>
     </ClInclude>
-
     <ClInclude Include="EnemyExample.h">
       <Filter>Game\Enemies\Stage1</Filter>
     </ClInclude>
-
     <ClInclude Include="Module.h">
       <Filter>Core\CoreModules</Filter>
     </ClInclude>
@@ -102,9 +95,6 @@
     </ClInclude>
     <ClInclude Include="ModuleMixer.h">
       <Filter>Core\CoreModules</Filter>
-    </ClInclude>
-    <ClInclude Include="ModulePlayer1.h">
-      <Filter>Game\Players</Filter>
     </ClInclude>
     <ClInclude Include="ModuleParticles.h">
       <Filter>Game\Base</Filter>
@@ -143,12 +133,6 @@
     <ClInclude Include="ModuleAudio.h">
       <Filter>Core\CoreModules</Filter>
     </ClInclude>
-
-    <ClInclude Include="EnemyExample.h">
-      <Filter>Game\Enemies\Stage1\Enemies</Filter>
-
-    <ClInclude Include="ModulePlayer.h">
-      <Filter>Game\Players\Core</Filter>
     <ClInclude Include="Module_Main_Menu.h">
       <Filter>Game\Screens</Filter>
     </ClInclude>
@@ -166,7 +150,9 @@
     </ClInclude>
     <ClInclude Include="Module_Map.h">
       <Filter>Game\Screens</Filter>
-
+    </ClInclude>
+    <ClInclude Include="Module_Players.h">
+      <Filter>Game\Players</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -206,11 +192,9 @@
     <ClCompile Include="ModuleCollision.cpp">
       <Filter>GameCore\CoreModules\Physics</Filter>
     </ClCompile>
-
     <ClCompile Include="EnemyExample.cpp">
       <Filter>Game\Enemies\Stage1</Filter>
     </ClCompile>
-
     <ClCompile Include="ModuleAudio.cpp">
       <Filter>Core\CoreModules</Filter>
     </ClCompile>
@@ -222,9 +206,6 @@
     </ClCompile>
     <ClCompile Include="main.cpp">
       <Filter>Core\CoreFiles</Filter>
-    </ClCompile>
-    <ClCompile Include="ModulePlayer1.cpp">
-      <Filter>Game\Players</Filter>
     </ClCompile>
     <ClCompile Include="Player.cpp">
       <Filter>Game\Players\Core</Filter>
@@ -238,12 +219,6 @@
     <ClCompile Include="ModuleWindow.cpp">
       <Filter>Core\CoreModules</Filter>
     </ClCompile>
-
-    <ClCompile Include="EnemyExample.cpp">
-      <Filter>Game\Enemies\Stage1\Enemies</Filter>
-
-    <ClCompile Include="ModulePlayer.cpp">
-      <Filter>Game\Players\Core</Filter>
     <ClCompile Include="Module_Main_Menu.cpp">
       <Filter>Game\Screens</Filter>
     </ClCompile>
@@ -261,7 +236,9 @@
     </ClCompile>
     <ClCompile Include="Module_Map.cpp">
       <Filter>Game\Screens</Filter>
-
+    </ClCompile>
+    <ClCompile Include="Module_Players.cpp">
+      <Filter>Game\Players</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

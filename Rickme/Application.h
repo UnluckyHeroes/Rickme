@@ -13,15 +13,13 @@ class ModuleRender;
 class ModuleMixer;
 class ModuleAudio;
 class ModuleFadeToBlack;
-class ModulePlayer;
-class ModulePlayer1;
+class Module_Players;
 class ModuleParticles;
 class ModuleMainMenu;
 class ModuleScoreboard;
 class ModuleCollision;
 class ModuleEnemies;
-class ModuleFont;
-class ModuleUserInterface;
+class ModuleUI;
 
 class Application
 {
@@ -35,16 +33,13 @@ public:
 	ModuleMixer* mixer = nullptr;
 	ModuleAudio* audio = nullptr;
 	ModuleFadeToBlack* fade = nullptr;
-
-	ModulePlayer* player1 = nullptr;
-
+	Module_Players* players = nullptr;
 	ModuleParticles* particles = nullptr;
 	ModuleMainMenu* mainMenu = nullptr;
 	ModuleScoreboard* scoreboard = nullptr;
 	ModuleCollision* collision = nullptr;
 	ModuleEnemies* enemies = nullptr;
-	ModuleFont* fonts = nullptr;
-	ModuleUserInterface* UI = nullptr;
+	ModuleUI* UI = nullptr;
 
 public:
 

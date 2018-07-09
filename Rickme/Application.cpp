@@ -6,13 +6,10 @@
 #include "ModuleMixer.h"
 #include "ModuleFadeToBlack.h"
 #include "ModuleParticles.h"
-#include "ModuleFont.h"
-#include "ModuleUserInterface.h"
+#include "ModuleUI.h"
 #include "ModuleAudio.h"
 
-
-#include "ModulePlayer.h"
-
+#include "Module_Players.h"
 //#include "ModuleMainMenu.h"
 #include "ModuleEnemies.h"
 
@@ -29,13 +26,9 @@ Application::Application()
 	//modules[i++] = scoreboard = new ModuleScoreboard();
 	modules[i++] = particles = new ModuleParticles();
 	modules[i++] = enemies = new ModuleEnemies();
-
-	modules[i++] = player1 = new ModulePlayer(PLAYER_1);
-
-	//modules[i++] = player1 = new ModulePlayer1();
+	modules[i++] = players = new Module_Players();	// modules[i++] = player1 = new Module_Players(player_number::PLAYER_1);
 	modules[i++] = collision = new ModuleCollision();
-	modules[i++] = UI = new ModuleUserInterface();
-	modules[i++] = fonts = new ModuleFont();
+	modules[i++] = UI = new ModuleUI();
 	modules[i++] = fade = new ModuleFadeToBlack();
 }
 

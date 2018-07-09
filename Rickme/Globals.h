@@ -1,13 +1,11 @@
 #ifndef __GLOBALS_H__
 #define __GLOBALS_H__
 
-
 #include <cassert>
 #include "SDL\include\SDL.h"
 #include "SDL\include\SDL_rect.h"
 
 //#define NDEBUG	// Enable this for the release version, as it will disable all asserts used for debugging
-
 
 #define LOG(format, ...) log(__FILE__, __LINE__, format, __VA_ARGS__);
 void log(const char file[], int line, const char* format, ...);
@@ -37,17 +35,14 @@ typedef unsigned char uchar;
 
 // Configuration -----------
 #define SCREEN_SIZE 1				// Multiplies the screen size and resolution
-
 #define SCREEN_WIDTH 480
 #define SCREEN_HEIGHT 270
-
 #define WIN_FULLSCREEN 0			// Makes the game fullscren using a bigger version of the original resolution?
 #define WIN_FULLSCREEN_DESKTOP 1	// Makes the game fullscren adapting to the desktop resolution
 #define WIN_BORDERLESS 0
 #define WIN_RESIZABLE 0
 #define REN_VSYNC 1
 #define VERSION " (v0.0)"			// Adds to the window name "Rickme", used to mark the current working version
-
 
 // Useful functions
 int timeToMiliseconds(int minutes = 0, int seconds = 0) {	// Minutes, seconds
