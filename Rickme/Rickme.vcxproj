@@ -137,7 +137,7 @@
     <ClInclude Include="ModuleInput.h" />
     <ClInclude Include="ModuleMixer.h" />
     <ClInclude Include="ModuleParticles.h" />
-    <ClInclude Include="ModulePlayers.h" />
+    <ClInclude Include="Module_Players.h" />
     <ClInclude Include="ModuleRender.h" />
     <ClInclude Include="ModuleTextures.h" />
     <ClInclude Include="ModuleUI.h" />
@@ -165,7 +165,7 @@
     <ClCompile Include="ModuleInput.cpp" />
     <ClCompile Include="ModuleMixer.cpp" />
     <ClCompile Include="ModuleParticles.cpp" />
-    <ClCompile Include="ModulePlayers.cpp" />
+    <ClCompile Include="Module_Players.cpp" />
     <ClCompile Include="ModuleRender.cpp" />
     <ClCompile Include="ModuleTextures.cpp" />
     <ClCompile Include="ModuleUI.cpp" />
