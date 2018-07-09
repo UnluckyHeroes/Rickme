@@ -37,6 +37,9 @@
     <Filter Include="Game\Players\Core">
       <UniqueIdentifier>{fcd9798c-21c3-4571-aca5-169dc70f5b96}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Game\Enemies\Stage1\Enemies">
+      <UniqueIdentifier>{ba26e066-6e5e-4918-89f6-b20993fea608}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Animation.h">
@@ -74,9 +77,6 @@
     </ClInclude>
     <ClInclude Include="Enemy.h">
       <Filter>Game\Enemies\Core</Filter>
-    </ClInclude>
-    <ClInclude Include="EnemyExample.h">
-      <Filter>Game\Enemies\Stage1</Filter>
     </ClInclude>
     <ClInclude Include="Module.h">
       <Filter>Core\CoreModules</Filter>
@@ -130,6 +130,9 @@
     <ClInclude Include="ModuleAudio.h">
       <Filter>Core\CoreModules</Filter>
     </ClInclude>
+    <ClInclude Include="EnemyExample.h">
+      <Filter>Game\Enemies\Stage1\Enemies</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Application.cpp">
@@ -168,9 +171,6 @@
     <ClCompile Include="ModuleCollision.cpp">
       <Filter>GameCore\CoreModules\Physics</Filter>
     </ClCompile>
-    <ClCompile Include="EnemyExample.cpp">
-      <Filter>Game\Enemies\Stage1</Filter>
-    </ClCompile>
     <ClCompile Include="ModuleAudio.cpp">
       <Filter>Core\CoreModules</Filter>
     </ClCompile>
@@ -197,6 +197,9 @@
     </ClCompile>
     <ClCompile Include="ModuleWindow.cpp">
       <Filter>Core\CoreModules</Filter>
+    </ClCompile>
+    <ClCompile Include="EnemyExample.cpp">
+      <Filter>Game\Enemies\Stage1\Enemies</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
