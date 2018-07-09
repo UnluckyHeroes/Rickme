@@ -11,7 +11,7 @@ Module_Map::Module_Map()	//@CarlesHoms
 
 	//Door Rects (3x3 tilemap used to draw the room (426x270px, 142x90px/tile))
 	topDoor.x = 142 * 1 + offsetBorders.x;
-	topDoor.y = 90 * 0 + offsetBorders.y;
+	topDoor.y = 90 * 0 + offsetBorders.y;	// THIS IS FOR TEXTURE ALLOCATION, NO OFFSET SHOULD BE APPLIED
 	topDoor.w = 142;
 	topDoor.h = 90;
 
