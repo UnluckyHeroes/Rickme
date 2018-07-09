@@ -1,9 +1,9 @@
 #include "Module_Players.h"
 
 
-Module_Players::Module_Players(PLAYER_NUMBER playerNumber_) { //@Joan Marín
+Module_Players::Module_Players(player_number playerNumber_) { //@Joan Marín
 
-	if (playerNumber_ == PLAYER_NUMBER::PLAYER_1) {
+	if (playerNumber_ == player_number::PLAYER_1) {
 
 		/*	Stablish controls for player 1:
 		Going left  ->	A

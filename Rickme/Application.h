@@ -20,8 +20,7 @@ class ModuleMainMenu;
 class ModuleScoreboard;
 class ModuleCollision;
 class ModuleEnemies;
-class ModuleFont;
-class ModuleUserInterface;
+class ModuleUI;
 
 class Application
 {
@@ -41,8 +40,7 @@ public:
 	ModuleScoreboard* scoreboard = nullptr;
 	ModuleCollision* collision = nullptr;
 	ModuleEnemies* enemies = nullptr;
-	ModuleFont* fonts = nullptr;
-	ModuleUserInterface* UI = nullptr;
+	ModuleUI* UI = nullptr;
 
 public:
 

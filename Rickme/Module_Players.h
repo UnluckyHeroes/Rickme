@@ -5,26 +5,25 @@
 #include "Animation.h"
 #include "Globals.h"
 #include "p2Point.h"
+#include "Player.h"
 #include "ModuleInput.h"
 #include "Application.h"
 
-
-
 struct SDL_Texture;
 
-enum class PLAYER_NUMBER {
+enum class player_number {
 	PLAYER_1,
 	PLAYER_2
 };
 
-enum WEAPON {
+enum weapon {
 	PISTOL,
 	SHOTGUN,
 	RIFLE
 };
 
 //The modifier will add different effects to the weapon: damage, slow effect,etc.
-enum MODIFIER {
+enum modifier {
 	NAIL,
 	ELECRTICITY,
 	FIRE,
@@ -34,7 +33,7 @@ enum MODIFIER {
 class Module_Players :public Module {
 public:
 
-	Module_Players(PLAYER_NUMBER playerNumber_);
+	Module_Players(player_number playerNumber_);
 	~Module_Players();
 
 	bool Start();
@@ -56,8 +55,8 @@ public:
 
 	iPoint playerPosition;		//Position of the player {x,y}
 
-	WEAPON currentWeapon;		//Current weapon of the player
-	MODIFIER currentModifier;	//Current modifier of the weapon
+	weapon currentWeapon;		//Current weapon of the player
+	modifier currentModifier;	//Current modifier of the weapon
 
 private:
 
