@@ -96,9 +96,6 @@
     <ClInclude Include="ModuleMixer.h">
       <Filter>Core\CoreModules</Filter>
     </ClInclude>
-    <ClInclude Include="ModulePlayer1.h">
-      <Filter>Game\Players</Filter>
-    </ClInclude>
     <ClInclude Include="ModuleParticles.h">
       <Filter>Game\Base</Filter>
     </ClInclude>
@@ -154,6 +151,9 @@
     <ClInclude Include="Module_Map.h">
       <Filter>Game\Screens</Filter>
     </ClInclude>
+    <ClInclude Include="ModulePlayers.h">
+      <Filter>Game\Players</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Application.cpp">
@@ -207,9 +207,6 @@
     <ClCompile Include="main.cpp">
       <Filter>Core\CoreFiles</Filter>
     </ClCompile>
-    <ClCompile Include="ModulePlayer1.cpp">
-      <Filter>Game\Players</Filter>
-    </ClCompile>
     <ClCompile Include="Player.cpp">
       <Filter>Game\Players\Core</Filter>
     </ClCompile>
@@ -239,6 +236,9 @@
     </ClCompile>
     <ClCompile Include="Module_Map.cpp">
       <Filter>Game\Screens</Filter>
+    </ClCompile>
+    <ClCompile Include="ModulePlayers.cpp">
+      <Filter>Game\Players</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
