@@ -6,7 +6,9 @@
 
 #define MAX_ENEMIES 500
 
-enum ENEMY_TYPES
+
+enum class ENEMY_TYPES
+
 {
 	NO_TYPE,
 	ENEMY_EXAMPLE,

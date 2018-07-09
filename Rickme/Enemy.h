@@ -11,6 +11,7 @@ struct Collider;
 class Enemy
 {
 protected:
+
 	
 	Collider* collider = nullptr;
 	
@@ -25,6 +26,7 @@ public:
 public:
 	Enemy(int x, int y);
 	//Enemy(int x, int y,int life,int score);
+
 	virtual ~Enemy();
 
 	const Collider* GetCollider() const;
