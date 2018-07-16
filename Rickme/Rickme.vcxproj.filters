@@ -81,9 +81,6 @@
     <ClInclude Include="Enemy.h">
       <Filter>Game\Enemies\Core</Filter>
     </ClInclude>
-    <ClInclude Include="EnemyExample.h">
-      <Filter>Game\Enemies\Stage1</Filter>
-    </ClInclude>
     <ClInclude Include="Module.h">
       <Filter>Core\CoreModules</Filter>
     </ClInclude>
@@ -154,6 +151,18 @@
     <ClInclude Include="Module_Players.h">
       <Filter>Game\Players</Filter>
     </ClInclude>
+    <ClInclude Include="EnemyRapier.h">
+      <Filter>Game\Enemies\Stage1</Filter>
+    </ClInclude>
+    <ClInclude Include="EnemyCranberry.h">
+      <Filter>Game\Enemies\Stage1</Filter>
+    </ClInclude>
+    <ClInclude Include="EnemyBile.h">
+      <Filter>Game\Enemies\Stage1</Filter>
+    </ClInclude>
+    <ClInclude Include="Boss.h">
+      <Filter>Game\Enemies\Stage1</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Application.cpp">
@@ -191,9 +200,6 @@
     </ClCompile>
     <ClCompile Include="ModuleCollision.cpp">
       <Filter>GameCore\CoreModules\Physics</Filter>
-    </ClCompile>
-    <ClCompile Include="EnemyExample.cpp">
-      <Filter>Game\Enemies\Stage1</Filter>
     </ClCompile>
     <ClCompile Include="ModuleAudio.cpp">
       <Filter>Core\CoreModules</Filter>
@@ -239,6 +245,18 @@
     </ClCompile>
     <ClCompile Include="Module_Players.cpp">
       <Filter>Game\Players</Filter>
+    </ClCompile>
+    <ClCompile Include="EnemyRapier.cpp">
+      <Filter>Game\Enemies\Stage1</Filter>
+    </ClCompile>
+    <ClCompile Include="EnemyCranberrycpp.cpp">
+      <Filter>Game\Enemies\Stage1</Filter>
+    </ClCompile>
+    <ClCompile Include="EnemyBile.cpp">
+      <Filter>Game\Enemies\Stage1</Filter>
+    </ClCompile>
+    <ClCompile Include="Boss.cpp">
+      <Filter>Game\Enemies\Stage1</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

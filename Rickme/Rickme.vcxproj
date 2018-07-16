@@ -119,8 +119,11 @@
   <ItemGroup>
     <ClInclude Include="Animation.h" />
     <ClInclude Include="Application.h" />
+    <ClInclude Include="Boss.h" />
     <ClInclude Include="Enemy.h" />
-    <ClInclude Include="EnemyExample.h" />
+    <ClInclude Include="EnemyBile.h" />
+    <ClInclude Include="EnemyCranberry.h" />
+    <ClInclude Include="EnemyRapier.h" />
     <ClInclude Include="Globals.h" />
     <ClInclude Include="Dungeon.h" />
     <ClInclude Include="MemLeaks.h" />
@@ -148,9 +151,12 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Application.cpp" />
+    <ClCompile Include="Boss.cpp" />
     <ClCompile Include="Dungeon.cpp" />
     <ClCompile Include="Enemy.cpp" />
-    <ClCompile Include="EnemyExample.cpp" />
+    <ClCompile Include="EnemyBile.cpp" />
+    <ClCompile Include="EnemyCranberrycpp.cpp" />
+    <ClCompile Include="EnemyRapier.cpp" />
     <ClCompile Include="Globals.cpp" />
     <ClCompile Include="Module_Map.cpp" />
     <ClCompile Include="OldDungeon.cpp" />

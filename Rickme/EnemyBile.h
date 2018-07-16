@@ -1,20 +1,19 @@
 #pragma once
-#ifndef ENEMY_RAPIER_H__
-#define ENEMY_RAPIER_H__
+#ifndef ENEMY_BILE_H
+#define ENEMY_BILE_H
 #include "Enemy.h"
 
-class EnemyRapier : public Enemy {
+class EnemyBile : public Enemy {
 
 private:
-	uint speed = 3;
-	uint life = 5;
-	uint score = 100;
+	uint speed = 1;
+	uint life = 10;
+	uint score = 150;
 public:
 
-	EnemyRapier(int x, int y);
+	EnemyBile(int x, int y);
 	void Move();
 	virtual void OnCollision(Collider *collider) override;
-
 public:
 	Animation Idl;
 	Animation Up;
@@ -25,15 +24,19 @@ public:
 	iPoint playerPosition;
 
 public:
-	SDL_Texture * EnemyRapierTextures;
+	SDL_Texture * EnemyBileTextures;
 
 public:
 	bool PlayerInTheRoom = false;
-	
-public: 
+
+public:
 	float radians;
 	float angle;
 };
+
+
+
+
 
 
 

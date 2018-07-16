@@ -1,17 +1,17 @@
 #pragma once
-#ifndef ENEMY_RAPIER_H__
-#define ENEMY_RAPIER_H__
+#ifndef ENEMY_CRANBERRY_H
+#define ENEMY_CRANBERRY_H
 #include "Enemy.h"
 
-class EnemyRapier : public Enemy {
+class EnemyCranBerry : public Enemy {
 
 private:
-	uint speed = 3;
-	uint life = 5;
+	uint speed = 2;
+	uint life = 8;
 	uint score = 100;
 public:
 
-	EnemyRapier(int x, int y);
+	EnemyCranBerry(int x, int y);
 	void Move();
 	virtual void OnCollision(Collider *collider) override;
 
@@ -25,12 +25,12 @@ public:
 	iPoint playerPosition;
 
 public:
-	SDL_Texture * EnemyRapierTextures;
+	SDL_Texture * EnemyCranBerryTextures;
 
 public:
 	bool PlayerInTheRoom = false;
-	
-public: 
+
+public:
 	float radians;
 	float angle;
 };
@@ -38,4 +38,12 @@ public:
 
 
 
-#endif
+
+
+
+
+
+
+
+
+#endif // !ENEMY_CRANBERRY_H
