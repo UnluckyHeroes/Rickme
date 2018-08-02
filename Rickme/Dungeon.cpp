@@ -9,8 +9,11 @@ Dungeon::Dungeon(dungeon_levels dungeonLevel) : numRooms(0) {
 
 	srand(time(NULL));
 
-	for (int i = 0; i < maxHorizontal; i++) {		// Initialize all map pointers to nullptr
-		for (int j = 0; j < maxVertical; j++) {
+	startingPos.x = 4;
+	startingPos.y = 4;
+
+	for (int i = 0; i < maxRows; i++) {		// Initialize all map pointers to nullptr
+		for (int j = 0; j < maxColumns; j++) {
 			dungeonMap[i][j] = nullptr;
 		}
 	}
@@ -54,8 +57,8 @@ Dungeon::Dungeon(dungeon_levels dungeonLevel) : numRooms(0) {
 
 Dungeon::~Dungeon() {	// Delete dungeon
 	
-	for (int i = 0; i < maxHorizontal; i++) {	// Delete all rooms in the dungeon
-		for (int j = 0; j < maxVertical; j++) {
+	for (int i = 0; i < maxRows; i++) {	// Delete all rooms in the dungeon
+		for (int j = 0; j < maxColumns; j++) {
 			if (dungeonMap[i][j] != nullptr) {
 				delete dungeonMap[i][j];
 				dungeonMap[i][j] = nullptr;
@@ -65,10 +68,10 @@ Dungeon::~Dungeon() {	// Delete dungeon
 }
 
 void Dungeon::linkRooms(ushort positionX, ushort positionY) {	// Function that has a 25% chance of adding doors to surrounding rooms
-	if (positionY + 1 < maxVertical && dungeonMap[positionX][positionY + 1] != nullptr && rand() % 4 == 0)
+	if (positionY + 1 < maxColumns && dungeonMap[positionX][positionY + 1] != nullptr && rand() % 4 == 0)
 		dungeonMap[positionX][positionY + 1]->topDoor = true;
 
-	if (positionX + 1 < maxHorizontal && dungeonMap[positionX + 1][positionY] != nullptr && rand() % 4 == 0)
+	if (positionX + 1 < maxRows && dungeonMap[positionX + 1][positionY] != nullptr && rand() % 4 == 0)
 		dungeonMap[positionX + 1][positionY]->rightDoor = true;
 
 	if (positionY - 1 > 0 && dungeonMap[positionX][positionY - 1] != nullptr && rand() % 4 == 0)
@@ -108,7 +111,7 @@ void Dungeon::generateDungeon(ushort positionX, ushort positionY, dungeon_levels
 	// For each potential door, check if it's possible to create a room and do so if the probability chance allows it
 	if (numRooms < maxRooms														// Check that room limit hasn't been reached
 		&& dungeonMap[positionX][positionY]->topDoor == false					// Check that a room has not already been created
-		&& positionY + 1 < maxVertical											// Check if rooms would be off limits
+		&& positionY + 1 < maxColumns											// Check if rooms would be off limits
 		&& dungeonMap[positionX][positionY + 1] == nullptr						// Check that a room is not already occupying that space
 		&& putDoor(numRooms) == true) {											// Function that checks by probability if a room is created
 
@@ -125,7 +128,7 @@ void Dungeon::generateDungeon(ushort positionX, ushort positionY, dungeon_levels
 	}
 	if (numRooms < maxRooms
 		&& dungeonMap[positionX][positionY]->rightDoor == false
-		&& positionX + 1 < maxHorizontal
+		&& positionX + 1 < maxRows
 		&& dungeonMap[positionX + 1][positionY] == nullptr
 		&& putDoor(numRooms) == true) {
 
@@ -176,4 +179,8 @@ void Dungeon::generateDungeon(ushort positionX, ushort positionY, dungeon_levels
 	}
 
 	dungeonMap[positionX][positionY]->generateRoom(paramDungeonLevel, dungeonMap[positionX][positionY]->roomType);
+}
+
+int Dungeon::timeToMiliseconds(int minutes, int seconds) {	// Minutes, seconds
+	return (minutes * 60 + seconds) * 1000;
 }

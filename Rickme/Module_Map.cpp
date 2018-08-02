@@ -81,21 +81,21 @@ update_status Module_Map::Update()
 
 	drawDoors();	// Draw all doors on current room and add their colliders
 
-	if (App->input->keyboard[SDL_SCANCODE_SPACE] == 1)
-	{
-		App->fade->FadeToBlack(this, App->stage1, 0.5);
-	}
+	//if (App->input->keyboard[SDL_SCANCODE_SPACE] == 1)
+	//{
+	//	App->fade->FadeToBlack(this, App->stage1, 0.5);
+	//}
 
-	if (App->input->keyboard[SDL_SCANCODE_1] == 1 && App->input->debugMode == true) //press for 1 player mode @AndresSala
-	{
-		App->input->secondPlayerState = false;
-	}
+	//if (App->input->keyboard[SDL_SCANCODE_1] == 1 && App->input->debugMode == true) //press for 1 player mode @AndresSala
+	//{
+	//	App->input->secondPlayerState = false;
+	//}
 
 
-	if (App->input->keyboard[SDL_SCANCODE_2] == 1 && App->input->debugMode == true) // press for 2 players mode  @AndresSala
-	{
-		App->input->secondPlayerState = true;
-	}
+	//if (App->input->keyboard[SDL_SCANCODE_2] == 1 && App->input->debugMode == true) // press for 2 players mode  @AndresSala
+	//{
+	//	App->input->secondPlayerState = true;
+	//}
 
 	return UPDATE_CONTINUE;
 }

@@ -11,25 +11,6 @@
 
 struct SDL_Texture;
 
-enum class player_number {
-	PLAYER_1,
-	PLAYER_2
-};
-
-enum weapon {
-	PISTOL,
-	SHOTGUN,
-	RIFLE
-};
-
-//The modifier will add different effects to the weapon: damage, slow effect,etc.
-enum modifier {
-	NAIL,
-	ELECRTICITY,
-	FIRE,
-	NONE
-};
-
 class Module_Players :public Module {
 public:
 
@@ -42,14 +23,14 @@ public:
 	update_status Update();
 	bool CleanUp();
 
-	void OnCollision();
+	//void OnCollision();
 
-	void PickGun();
-	void PickMod();
+	//void PickGun();
+	//void PickMod();
 
 	void const Move();			//Player movement
 
-	void const Aim();			//Determines in which direction the player is aiming at
+	//void const Aim();			//Determines in which direction the player is aiming at
 	void const Shoot();			//Shoot
 
 	uint playerSpeed = 2;		//Speed at which the player moves

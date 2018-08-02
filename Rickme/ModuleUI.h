@@ -4,6 +4,7 @@
 #include "Module.h"
 #include "Animation.h"
 #include "Globals.h"
+#include "Application.h"
 #include "p2Point.h"
 
 #include "SDL/include/SDL_pixels.h"
@@ -27,10 +28,7 @@ struct Font {
 	uint rows, len, char_w, char_h, row_chars;
 };
 
-
-class ModuleUI : public Module
-{
-
+class ModuleUI : public Module {
 public:
 
 	ModuleUI();
@@ -69,7 +67,7 @@ public:
 
 private:
 
-	Font fonts[MAX_FONTS]; //WTF is this error?
+	//Font fonts[MAX_FONTS]; //WTF is this error?
 };
 
 #endif

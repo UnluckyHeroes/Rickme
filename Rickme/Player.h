@@ -44,6 +44,8 @@ public:
 
 public:
 
+	void OnCollision(Collider* c1, Collider* c2);
+
 	SDL_Texture* graphics = nullptr;
 
 	void const Move();			//Player movement

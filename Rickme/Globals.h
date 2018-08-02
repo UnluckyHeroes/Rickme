@@ -44,9 +44,4 @@ typedef unsigned char uchar;
 #define REN_VSYNC 1
 #define VERSION " (v0.0)"			// Adds to the window name "Rickme", used to mark the current working version
 
-// Useful functions
-int timeToMiliseconds(int minutes = 0, int seconds = 0) {	// Minutes, seconds
-	return (minutes * 60 + seconds) * 1000;
-}
-
 #endif // __GLOBALS_H__

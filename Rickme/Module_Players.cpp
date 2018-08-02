@@ -27,19 +27,26 @@ Module_Players::Module_Players(player_number playerNumber_) {
 Module_Players::~Module_Players()
 {}
 
-bool Module_Players::Start() {}
+bool Module_Players::Init() {
+	return true;
+}
 
-bool Module_Players::CleanUp() {}
+bool Module_Players::Start() {
+	return true;
+}
+
+bool Module_Players::CleanUp() {
+	return true;
+}
 
 update_status Module_Players::Update() {
-
-
-
+	
 	Move();
 
 	if (App->input->keyboard[shootKey] == KEY_STATE::KEY_REPEAT)
 		Shoot();
 
+	return UPDATE_CONTINUE;
 }
 
 void const Module_Players::Move() {

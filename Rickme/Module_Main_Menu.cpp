@@ -53,25 +53,6 @@ bool Module_Main_Menu::Start()
 	//orangeLettersText = App->textures->Load("Assets/Sprites/Backgrounds/1_FullMap.png");
 	//whiteLettersText = App->textures->Load("Assets/Sprites/Backgrounds/1_FullMap.png");
 
-	App->player1->bluePower = LEVEL_1;		// Flag/counter for blue power level
-	App->player1->orangePower = LEVEL_0;	// Flag/counter for orange power level
-	App->player1->yellowPower = LEVEL_0;	// Flag/counter for yellow power level
-	App->player1->greenPower = LEVEL_0;		// Flag/counter for green power level
-
-	App->player2->bluePower = LEVEL_1;		// Flag/counter for blue power level
-	App->player2->orangePower = LEVEL_0;	// Flag/counter for orange power level
-	App->player2->yellowPower = LEVEL_0;	// Flag/counter for yellow power level
-	App->player2->greenPower = LEVEL_0;		// Flag/counter for green power level
-
-	App->player1->Disable();
-	App->shieldsP1->Disable();
-
-	App->player2->Disable();
-	App->shieldsP2->Disable();
-
-	App->enemies->Disable();
-	App->collision->Disable();
-
 	//Music
 	MusicMainMenu = App->mixer->LoadMusic("Assets/Audio/Music/02_Title.ogg");
 	Mix_VolumeMusic(MUSICVol);
@@ -88,31 +69,29 @@ update_status Module_Main_Menu::Update()
 	App->render->Blit(titleText, 36, 27, &titleRect); // logo
 	App->render->Blit(viscoGamesText, 75, 160, &viscoGamesRect); // Visco Games
 
-	if (App->input->keyboard[SDL_SCANCODE_SPACE] == 1)
-	{
-		App->fade->FadeToBlack(this, App->stage1, 0.5);
-	}
+	//if (App->input->keyboard[SDL_SCANCODE_SPACE] == 1)
+	//{
+	//	App->fade->FadeToBlack(this, App->stage1, 0.5);
+	//}
 
-	if (App->input->keyboard[SDL_SCANCODE_1] == 1 && App->input->debugMode == true) //press for 1 player mode @AndresSala
-	{
-		App->input->secondPlayerState = false;
-	}
+	//if (App->input->keyboard[SDL_SCANCODE_1] == 1 && App->input->debugMode == true) //press for 1 player mode @AndresSala
+	//{
+	//	App->input->secondPlayerState = false;
+	//}
 
 
-	if (App->input->keyboard[SDL_SCANCODE_2] == 1 && App->input->debugMode == true) // press for 2 players mode  @AndresSala
-	{
-		App->input->secondPlayerState = true;
-	}
+	//if (App->input->keyboard[SDL_SCANCODE_2] == 1 && App->input->debugMode == true) // press for 2 players mode  @AndresSala
+	//{
+	//	App->input->secondPlayerState = true;
+	//}
 
 	return UPDATE_CONTINUE;
 }
 
 bool Module_Main_Menu::CleanUp()
 {
-	App->player1->Disable();
-	App->shieldsP1->Disable();
-	App->player2->Disable();
-	App->shieldsP2->Disable();
+	/*App->player1->Disable();
+	App->player2->Disable();*/
 
 	LOG("Unloading Main Menu");
 	App->textures->Unload(backgroundText);

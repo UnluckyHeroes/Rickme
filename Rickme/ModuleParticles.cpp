@@ -5,7 +5,7 @@
 #include "ModuleRender.h"
 #include "ModuleCollision.h"
 #include "ModuleParticles.h"
-#include "ModulePlayer1.h"
+#include "Module_Players.h"
 #include "Path.h"
 
 #include "SDL/include/SDL_timer.h"

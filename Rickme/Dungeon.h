@@ -4,9 +4,12 @@
 #include "Module.h"
 #include "Globals.h"
 #include "Room.h"
+#include "p2Point.h"
 
 #include "SDL_mixer/include/SDL_mixer.h"
 #pragma comment(lib,"SDL_mixer/libx86/SDL2_mixer.lib")
+
+class Room;
 
 enum class dungeon_levels {
 	LEVEL_1,
@@ -18,19 +21,20 @@ enum class dungeon_levels {
 
 class Dungeon {
 public:
-	Dungeon(dungeon_levels dungeonLevel) {};
+	Dungeon(dungeon_levels dungeonLevel);
 	~Dungeon();
 
 public:
 	void generateDungeon(ushort positionX, ushort PositionY, dungeon_levels paramDungeonLevel);
 	void linkRooms(ushort positionX, ushort positionY);
 	bool putDoor(ushort paramNumRooms);
+	int timeToMiliseconds(int minutes = 0, int seconds = 0);
 
 	// Map
-	ushort maxHorizontal = 10;
-	ushort maxVertical = 10;
+	ushort maxRows = 10;
+	ushort maxColumns = 10;
 	Room *dungeonMap[10][10];
-	iPoint startingPos = { 4, 4 };	// Middle starting position
+	iPoint startingPos;	// Middle starting position
 
 	//Rooms
 	ushort numRooms;

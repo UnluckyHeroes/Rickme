@@ -151,7 +151,7 @@ void ModuleEnemies::SpawnEnemy(const EnemyInfo& info)
 		switch (info.type)
 		{
 		case ENEMY_TYPES::ENEMY_EXAMPLE:
-			enemies[i] = new PowerUp_Enemy(info.x, info.y);
+			//enemies[i] = new PowerUp_Enemy(info.x, info.y);
 			break;
 
 		}

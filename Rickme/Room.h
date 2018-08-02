@@ -9,6 +9,9 @@
 #include "SDL_mixer/include/SDL_mixer.h"
 #pragma comment(lib,"SDL_mixer/libx86/SDL2_mixer.lib")
 
+enum class dungeon_levels;
+class Dungeon;
+
 enum class door_layout {
 	TOP_LEFT,
 	TOP,

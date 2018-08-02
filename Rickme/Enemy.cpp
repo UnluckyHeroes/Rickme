@@ -3,8 +3,8 @@
 #include "ModuleCollision.h"
 #include "ModuleParticles.h"
 #include "ModuleRender.h"
-#include "ModulePlayer1.h"
-#include "ModuleUserInterface.h"
+#include "Module_Players.h"
+#include "ModuleUI.h"
 
 Enemy::Enemy(int x, int y) : position(x, y)
 {

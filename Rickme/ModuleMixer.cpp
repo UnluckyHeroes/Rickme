@@ -3,7 +3,7 @@
 #include "ModuleMixer.h"
 #include "SDL/include/SDL.h"
 #include "SDL_mixer/include/SDL_mixer.h"
-#include "ModuleMainMenu.h"
+#include "Module_Main_Menu.h"
 
 #pragma comment(lib, "SDL_mixer/libx86/SDL2_mixer.lib")
 

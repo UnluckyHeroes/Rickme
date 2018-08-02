@@ -15,7 +15,7 @@ class ModuleAudio;
 class ModuleFadeToBlack;
 class Module_Players;
 class ModuleParticles;
-class ModuleMainMenu;
+class Module_Main_Menu;
 class ModuleScoreboard;
 class ModuleCollision;
 class ModuleEnemies;
@@ -35,7 +35,7 @@ public:
 	ModuleFadeToBlack* fade = nullptr;
 	Module_Players* players = nullptr;
 	ModuleParticles* particles = nullptr;
-	ModuleMainMenu* mainMenu = nullptr;
+	Module_Main_Menu* mainMenu = nullptr;
 	ModuleScoreboard* scoreboard = nullptr;
 	ModuleCollision* collision = nullptr;
 	ModuleEnemies* enemies = nullptr;
